@@ -475,6 +475,8 @@
         const scrollSections = ['hero', 'about', 'gallery', 'schedule'];
 
         let navTicking = false;
+        let previousSection = 'hero';
+
         window.addEventListener('scroll', () => {
             if (!navTicking) {
                 window.requestAnimationFrame(() => {
@@ -488,16 +490,52 @@
                         }
                     });
 
-                    pillItems.forEach(item => {
-                        item.classList.remove('active');
-                        if (item.getAttribute('data-section') === current) {
-                            item.classList.add('active');
-                        }
-                    });
+                    // Only update if section changed for smoother transitions
+                    if (current !== previousSection) {
+                        pillItems.forEach(item => {
+                            const wasActive = item.classList.contains('active');
+                            item.classList.remove('active');
+
+                            if (item.getAttribute('data-section') === current) {
+                                item.classList.add('active');
+                                // Add slight haptic-like feedback on mobile
+                                if (window.innerWidth < 768) {
+                                    item.style.transform = 'scale(1.15)';
+                                    setTimeout(() => {
+                                        item.style.transform = '';
+                                    }, 200);
+                                }
+                            }
+                        });
+                        previousSection = current;
+                    }
                     navTicking = false;
                 });
                 navTicking = true;
             }
+        });
+
+        // Enhanced click handling for smooth scrolling
+        pillItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                const section = item.getAttribute('data-section');
+                if (section && section !== 'hero') {
+                    e.preventDefault();
+                    const target = document.getElementById(section);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                } else if (section === 'hero') {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
 
         // Smooth Reveal Animations on Scroll
