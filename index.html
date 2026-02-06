@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRIS'26 | Premium Signal Processing Event</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="theme.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50">
+    <canvas id="antigravity-bg" class="fixed inset-0 pointer-events-none z-[-3]"></canvas>
+    <div class="bg-orb" style="top: -10%; left: -10%;"></div>
+    <div class="bg-orb" style="bottom: -10%; right: -10%; animation-delay: -5s;"></div>
+    <div id="petals-container"></div>
+
+    <!-- Premium Header -->
+    <header class="hidden md:flex fixed w-full z-50 px-6 py-6 justify-center">
+        <div
+            class="container max-w-5xl flex justify-between items-center premium-glass px-8 py-3 rounded-full border border-white/40 shadow-sm transition-all duration-500 hover:shadow-lg">
+            <div class="flex items-center">
+                <img src="./logos/iris-ceal-blue-main.png" alt="IRIS Logo" class="h-8 filter brightness-0">
+            </div>
+
+            <nav
+                class="hidden md:flex items-center space-x-12 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-900">
+                <a href="#about" class="nav-item">ABOUT</a>
+                <a href="#schedule" class="nav-item">ROADMAP</a>
+                <a href="https://thepase.ceal.in"
+                    class="px-8 py-3 bg-crimson-red text-white rounded-full hover:bg-black transition-all duration-500 shadow-lg">REGISTER</a>
+            </nav>
+
+            <!-- Logo only on Mobile -->
+            <div class="md:hidden flex items-center">
+                <span class="text-[10px] font-bold tracking-[0.3em] text-[#BC002D]">IRIS'26</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="min-h-screen flex items-center justify-center pt-20 px-8 relative overflow-hidden">
+            <!-- Japanese Background Decor -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none opacity-5">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#BC002D" stroke-width="0.1" />
+                    <path d="M50 10 L50 90 M10 50 L90 50" stroke="#BC002D" stroke-width="0.1" />
+                </svg>
+            </div>
+
+            <div class="container max-w-6xl relative z-10 text-center">
+                <div class="reveal-up">
+
+                    <h1
+                        class="text-5xl md:text-9xl mb-8 leading-tight tracking-tight text-[#1A1A1A] hero-title inline-block">
+                        IRIS <span class="italic font-light">'26</span>
+                        <span class="kanji-reveal">虹彩</span>
+                    </h1>
+                    <div class="w-24 h-px bg-[#BC002D]/30 mx-auto mb-12"></div>
+                    <p
+                        class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed font-light italic mb-12">
+                        "An insightful reflection on Signal Processing, AI, and the aesthetics of emerging technology."
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="https://thepase.ceal.in" class="btn-premium">RESERVE SEAT</a>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <a href="https://thepase.ceal.in"
+                                class="px-6 py-3 border border-gray-300 text-[10px] font-bold uppercase tracking-widest text-gray-700 hover:bg-[#BC002D] hover:text-white transition-all">SB
+                                CEAL</a>
+                            <a href="https://thepase.ceal.in"
+                                class="px-6 py-3 border border-gray-300 text-[10px] font-bold uppercase tracking-widest text-gray-700 hover:bg-[#BC002D] hover:text-white transition-all">SB
+                                MBITS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Lanterns (SVG) -->
+            <div class="absolute bottom-10 right-10 md:right-20 pointer-events-none hidden md:block">
+                <svg width="60" height="100" viewBox="0 0 60 100" class="lantern-glow">
+                    <rect x="15" y="0" width="30" height="60" rx="4" fill="#BC002D" />
+                    <line x1="30" y1="60" x2="30" y2="100" stroke="#1A1A1A" stroke-width="1" />
+                    <text x="22" y="38" fill="white" font-size="20" font-family="serif">愛</text>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-ma bg-white/40">
+            <div class="container max-w-5xl mx-auto px-8">
+                <div class="grid md:grid-cols-2 gap-20 items-center">
+                    <div class="reveal-up">
+                        <h2 class="text-4xl md:text-5xl mb-8 text-[#1A1A1A]">Reflection <br /><span
+                                class="text-[#BC002D] italic">of Excellence</span></h2>
+                        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                            Experience a transformative three-day hybrid journey at MBITS Kothamangalam.
+                            IRIS 2026 brings together global experts and ambitious students to explore the intersection
+                            of Signal Processing and Artificial Intelligence.
+                        </p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 max-w-xl mx-auto md:mx-0">
+                            <div class="text-center">
+                                <span id="days"
+                                    class="text-5xl md:text-7xl countdown-value text-gray-900 block leading-tight">--</span>
+                                <span
+                                    class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-[#BC002D] font-bold mt-2 block">Days</span>
+                            </div>
+                            <div class="text-center">
+                                <span id="hours"
+                                    class="text-5xl md:text-7xl countdown-value text-gray-900 block leading-tight">--</span>
+                                <span
+                                    class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-[#BC002D] font-bold mt-2 block">Hours</span>
+                            </div>
+                            <div class="text-center">
+                                <span id="minutes"
+                                    class="text-5xl md:text-7xl countdown-value text-gray-900 block leading-tight">--</span>
+                                <span
+                                    class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-[#BC002D] font-bold mt-2 block">Minutes</span>
+                            </div>
+                            <div class="text-center">
+                                <span id="seconds"
+                                    class="text-5xl md:text-7xl countdown-value text-[#BC002D] block leading-tight">--</span>
+                                <span
+                                    class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold mt-2 block">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal-up relative">
+                        <div
+                            class="aspect-[4/5] bg-gray-100 rounded-sm overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#BC002D]/20 to-transparent"></div>
+                            <img src="./images/Frame 1261153514.png" alt="Abstract Background"
+                                class="object-cover w-full h-full opacity-60">
+                        </div>
+                        <div class="absolute -bottom-10 -left-10 w-40 h-40 border border-[#BC002D]/20 z-[-1]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speakers Marquee -->
+        <section class="py-12 border-y border-gray-100 bg-white overflow-hidden">
+            <div class="animate-marquee">
+                <!-- Set 1 -->
+                <div class="flex items-center space-x-20 px-10">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl font-serif italic text-gray-200">01</span>
+                        <div>
+                            <h4 class="text-sm font-bold tracking-widest uppercase">Aiswarya Lakshmi</h4>
+                            <p class="text-[10px] text-[#BC002D] uppercase tracking-[0.2em]">IIT Palakkad</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl font-serif italic text-gray-200">02</span>
+                        <div>
+                            <h4 class="text-sm font-bold tracking-widest uppercase">Dhanushkumar R</h4>
+                            <p class="text-[10px] text-[#BC002D] uppercase tracking-[0.2em]">Microsoft Ambassador</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl font-serif italic text-gray-200">03</span>
+                        <div>
+                            <h4 class="text-sm font-bold tracking-widest uppercase">Abhijith Benny</h4>
+                            <p class="text-[10px] text-[#BC002D] uppercase tracking-[0.2em]">Digital Core Tech</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl font-serif italic text-gray-200">04</span>
+                        <div>
+                            <h4 class="text-sm font-bold tracking-widest uppercase">Akhil Raj</h4>
+                            <p class="text-[10px] text-[#BC002D] uppercase tracking-[0.2em]">TCS Cybersecurity</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Set 2 (Duplicate for seamless loop) -->
+                <div class="flex items-center space-x-20 px-10">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl font-serif italic text-gray-200">01</span>
+                        <div>
+                            <h4 class="text-sm font-bold tracking-widest uppercase">Aiswarya Lakshmi</h4>
+                            <p class="text-[10px] text-[#BC002D] uppercase tracking-[0.2em]">IIT Palakkad</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl font-serif italic text-gray-200">02</span>
+                        <div>
+                            <h4 class="text-sm font-bold tracking-widest uppercase">Dhanushkumar R</h4>
+                            <p class="text-[10px] text-[#BC002D] uppercase tracking-[0.2em]">Microsoft Ambassador</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl font-serif italic text-gray-200">03</span>
+                        <div>
+                            <h4 class="text-sm font-bold tracking-widest uppercase">Abhijith Benny</h4>
+                            <p class="text-[10px] text-[#BC002D] uppercase tracking-[0.2em]">Digital Core Tech</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl font-serif italic text-gray-200">04</span>
+                        <div>
+                            <h4 class="text-sm font-bold tracking-widest uppercase">Akhil Raj</h4>
+                            <p class="text-[10px] text-[#BC002D] uppercase tracking-[0.2em]">TCS Cybersecurity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Poster Focus Gallery -->
+        <section id="gallery" class="section-ma overflow-hidden">
+            <div class="container max-w-6xl mx-auto px-8">
+                <div class="text-center mb-16 reveal-up">
+                    <h2 class="text-4xl md:text-6xl mb-4 italic font-light">The Visuals</h2>
+                    <span class="text-[#BC002D] text-xs font-bold tracking-[0.4em] uppercase">Event Posters</span>
+                </div>
+
+                <div class="poster-carousel">
+                    <!-- Poster 1 -->
+                    <div class="poster-item active">
+                        <img src="./images/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
+                        <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                            <span class="text-[10px] tracking-widest uppercase mb-2">Technical Session</span>
+                            <h4 class="text-2xl font-serif italic">The Future of AI</h4>
+                            <div class="w-12 h-px bg-[#BC002D] mt-4"></div>
+                        </div>
+                    </div>
+                    <!-- Poster 2 -->
+                    <div class="poster-item next">
+                        <img src="./images/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
+                        <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                            <span class="text-[10px] tracking-widest uppercase mb-2">Networking</span>
+                            <h4 class="text-2xl font-serif italic">Student Meetup</h4>
+                            <div class="w-12 h-px bg-[#BC002D] mt-4"></div>
+                        </div>
+                    </div>
+                    <!-- Poster 3 -->
+                    <div class="poster-item far-right">
+                        <img src="./images/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
+                        <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+                            <span class="text-[10px] tracking-widest uppercase mb-2">Workshop</span>
+                            <h4 class="text-2xl font-serif italic">Signal Mastery</h4>
+                            <div class="w-12 h-px bg-[#BC002D] mt-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap -->
+        <section id="schedule" class="section-ma">
+            <div class="container max-w-6xl mx-auto px-8">
+                <div class="text-center mb-24 reveal-up">
+                    <h2 class="text-4xl md:text-6xl mb-4">Event <span class="italic font-light">Roadmap</span></h2>
+                    <p class="text-gray-400 uppercase tracking-[0.3em] text-[10px] font-bold">The Three-Day Cycle</p>
+                </div>
+
+                <div
+                    class="flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-hidden snap-x snap-mandatory gap-6 px-4 pb-8 no-scrollbar">
+                    <div class="reveal-up premium-glass p-12 hover:bg-white transition-all duration-500">
+                        <span class="text-[#BC002D] text-xs font-bold tracking-widest block mb-4">壱 / DAY ONE</span>
+                        <h3 class="text-2xl mb-8 font-light italic">Opening Ceremony</h3>
+                        <ul class="space-y-6 text-sm text-gray-600">
+                            <li class="flex justify-between border-b border-gray-100 pb-2">
+                                <span>Inauguration</span><span class="font-bold">09:00</span>
+                            </li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Keynote
+                                    Talk</span><span class="font-bold">10:30</span></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Mentalism</span><span
+                                    class="font-bold">14:00</span></li>
+                        </ul>
+                    </div>
+                    <div
+                        class="reveal-up premium-glass p-12 bg-white/60 hover:bg-white transition-all duration-500 snap-center">
+                        <span class="text-[#BC002D] text-xs font-bold tracking-widest block mb-4">弐 / DAY TWO</span>
+                        <h3 class="text-2xl mb-8 font-light italic">Technical Immersion</h3>
+                        <ul class="space-y-6 text-sm text-gray-600">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>AI
+                                    Analytics</span><span class="font-bold">09:30</span></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Ideathon</span><span
+                                    class="font-bold">13:00</span></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Community
+                                    Hub</span><span class="font-bold">16:00</span></li>
+                        </ul>
+                    </div>
+                    <div class="reveal-up premium-glass p-12 hover:bg-white transition-all duration-500">
+                        <span class="text-[#BC002D] text-xs font-bold tracking-widest block mb-4">参 / DAY THREE</span>
+                        <h3 class="text-2xl mb-8 font-light italic">Wireless Future</h3>
+                        <ul class="space-y-6 text-sm text-gray-600">
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>6G Networks</span><span
+                                    class="font-bold">09:00</span></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Treasure
+                                    Hunt</span><span class="font-bold">14:00</span></li>
+                            <li class="flex justify-between border-b border-gray-100 pb-2"><span>Farewell</span><span
+                                    class="font-bold">16:30</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative py-12 overflow-hidden border-t-4 border-[#BC002D]"
+        style="background: linear-gradient(to bottom, #4A0012, #1A0006);">
+        <!-- Comic Background Overlay -->
+        <div class="absolute inset-0 opacity-30 mix-blend-overlay">
+            <img src="./images/comic-footer-bg.png" class="w-full h-full object-cover">
+        </div>
+
+        <div class="container max-w-6xl mx-auto px-8 relative z-10">
+            <!-- Social Icons -->
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#"
+                    class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
+                    <i class="fab fa-linkedin-in text-base"></i>
+                </a>
+                <a href="#"
+                    class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
+                    <i class="fab fa-instagram text-base"></i>
+                </a>
+                <a href="#"
+                    class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
+                    <i class="fab fa-facebook-f text-base"></i>
+                </a>
+                <a href="#"
+                    class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
+                    <i class="fab fa-discord text-base"></i>
+                </a>
+                <a href="#"
+                    class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
+                    <i class="fas fa-envelope text-base"></i>
+                </a>
+            </div>
+
+            <!-- Logos -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+                <img src="./logos/sps-logo-color.png" alt="SPS Logo" class="h-12 brightness-0 invert opacity-80">
+                <img src="./logos/ieee-mb-blue.png" alt="IEEE Logo" class="h-12 brightness-0 invert opacity-80">
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center mb-8">
+                <p class="text-white font-bold tracking-[0.1em] text-sm md:text-md uppercase">
+                    © 2026 IEEE SPS KERALA CHAPTER. REGISTER NOW BEFORE IT'S TOO LATE!
+                </p>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8 border-t border-white/10 pt-6 mt-6">
+                <a href="#"
+                    class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
+                    SPS KERALA CHAPTER</a>
+                <a href="#"
+                    class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
+                    SBC TKMCE</a>
+                <a href="#"
+                    class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
+                    SIGNAL PROCESSING SOCIETY</a>
+                <a href="#"
+                    class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
+                    KERALA SECTION</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu (Hidden) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] hidden flex-col items-center justify-center space-y-8">
+        <button id="menu-close" class="absolute top-10 right-10 text-2xl">&times;</button>
+        <a href="#about" class="text-2xl font-serif">About</a>
+        <a href="#schedule" class="text-2xl font-serif">Roadmap</a>
+        <a href="https://thepase.ceal.in" class="text-2xl font-serif text-[#BC002D]">Register</a>
+    </div>
+
+    <!-- Floating Pill Nav (Mobile) -->
+    <nav class="pill-nav-container">
+        <a href="#" class="pill-nav-item active" data-section="hero">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#about" class="pill-nav-item" data-section="about">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+        </a>
+        <a href="#gallery" class="pill-nav-item" data-section="gallery">
+            <i class="fas fa-th-large"></i>
+            <span>Visuals</span>
+        </a>
+        <a href="#schedule" class="pill-nav-item" data-section="schedule">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Roadmap</span>
+        </a>
+        <a href="https://thepase.ceal.in" class="pill-nav-item" style="color: #BC002D;">
+            <i class="fas fa-ticket-alt"></i>
+            <span>Join</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="petals.js"></script>
+    <script src="antigravity.js"></script>
+    <script>
+        // Menu Toggle
+        const menuBtn = document.getElementById('menu-toggle');
+        const closeBtn = document.getElementById('menu-close');
+        const menu = document.getElementById('mobile-menu');
+
+        menuBtn?.addEventListener('click', () => menu.classList.remove('hidden'));
+        closeBtn?.addEventListener('click', () => menu.classList.add('hidden'));
+        menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
+
+        // Countdown
+        function updateCountdown() {
+            const eventDate = new Date('March 6, 2026 09:00:00').getTime();
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+
+            if (diff < 0) {
+                document.getElementById('days').innerText = '00';
+                document.getElementById('hours').innerText = '00';
+                document.getElementById('minutes').innerText = '00';
+                document.getElementById('seconds').innerText = '00';
+                return;
+            }
+
+            document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+            document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const hero = document.querySelector('h1');
+            if (hero) hero.style.transform = `translateY(${scroll * 0.15}px)`;
+        });
+
+        // Pill Nav Active State
+        const pillItems = document.querySelectorAll('.pill-nav-item');
+        const scrollSections = ['hero', 'about', 'gallery', 'schedule'];
+
+        window.addEventListener('scroll', () => {
+            let current = 'hero';
+            const scrollPos = window.scrollY + 200;
+
+            scrollSections.forEach(id => {
+                const element = id === 'hero' ? document.querySelector('main') : document.getElementById(id);
+                if (element && element.offsetTop <= scrollPos) {
+                    current = id;
+                }
+            });
+
+            pillItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-section') === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
