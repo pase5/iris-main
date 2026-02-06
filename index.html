@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>IRIS'26 | Premium Signal Processing Event</title>
+    <title>IRIS'26</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="theme.css" rel="stylesheet">
@@ -21,7 +21,8 @@
         <div
             class="container max-w-5xl flex justify-between items-center premium-glass px-8 py-3 rounded-full border border-white/40 shadow-sm transition-all duration-500 hover:shadow-lg">
             <div class="flex items-center">
-                <img src="./logos/iris-ceal-blue-main.png" alt="IRIS Logo" class="h-8 filter brightness-0">
+                <img id="navbar-logo" src="./logos/iris-ceal-blue-main.png" alt="IRIS Logo"
+                    class="h-8 filter brightness-0">
             </div>
 
             <nav
@@ -57,7 +58,10 @@
                     <h1
                         class="text-5xl md:text-9xl mb-8 leading-tight tracking-tight text-[#1A1A1A] hero-title inline-block">
                         IRIS <span class="italic font-light">'26</span>
-                        <span class="kanji-reveal">虹彩</span>
+                        <span class="kanji-reveal">
+                            <img src="./logos/IEEE SB CEAL Full - Dark.png" alt="CEAL IEEE Logo"
+                                class="inline-block h-2 md:h-5">
+                        </span>
                     </h1>
                     <div class="w-24 h-px bg-[#BC002D]/30 mx-auto mb-12"></div>
                     <p
@@ -78,9 +82,10 @@
                 </div>
             </div>
 
-            <!-- Floating Lanterns (SVG) -->
-            <div class="absolute bottom-10 right-10 md:right-20 pointer-events-none hidden md:block">
-                <svg width="60" height="100" viewBox="0 0 60 100" class="lantern-glow">
+            <!-- Floating Lanterns (SVG) - Theme Toggle -->
+            <div class="absolute bottom-10 right-10 md:right-20 hidden md:block">
+                <svg id="theme-toggle-lantern" width="60" height="100" viewBox="0 0 60 100" class="lantern-glow"
+                    style="cursor: pointer;">
                     <rect x="15" y="0" width="30" height="60" rx="4" fill="#BC002D" />
                     <line x1="30" y1="60" x2="30" y2="100" stroke="#1A1A1A" stroke-width="1" />
                     <text x="22" y="38" fill="white" font-size="20" font-family="serif">愛</text>
@@ -302,33 +307,37 @@
     </main>
 
     <!-- Footer -->
-    <footer class="relative py-12 overflow-hidden border-t-4 border-[#BC002D]"
-        style="background: linear-gradient(to bottom, #4A0012, #1A0006);">
+    <footer class="relative py-12 overflow-hidden border-t-4 border-[#BC002D]">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="./baground.png" class="w-full h-full object-cover opacity-40" alt="Footer Background">
+        </div>
+
         <!-- Comic Background Overlay -->
-        <div class="absolute inset-0 opacity-30 mix-blend-overlay">
+        <div class="absolute inset-0 opacity-30 mix-blend-overlay z-[1]">
             <img src="./images/comic-footer-bg.png" class="w-full h-full object-cover">
         </div>
 
         <div class="container max-w-6xl mx-auto px-8 relative z-10">
             <!-- Social Icons -->
             <div class="flex justify-center space-x-6 mb-8">
-                <a href="#"
+                <a href="https://thepase.ceal.in" target="_blank" rel="noopener"
                     class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
                     <i class="fab fa-linkedin-in text-base"></i>
                 </a>
-                <a href="#"
+                <a href="https://thepase.ceal.in" target="_blank" rel="noopener"
                     class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
                     <i class="fab fa-instagram text-base"></i>
                 </a>
-                <a href="#"
+                <a href="https://thepase.ceal.in" target="_blank" rel="noopener"
                     class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
                     <i class="fab fa-facebook-f text-base"></i>
                 </a>
-                <a href="#"
+                <a href="https://thepase.ceal.in" target="_blank" rel="noopener"
                     class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
                     <i class="fab fa-discord text-base"></i>
                 </a>
-                <a href="#"
+                <a href="https://thepase.ceal.in" target="_blank" rel="noopener"
                     class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
                     <i class="fas fa-envelope text-base"></i>
                 </a>
@@ -343,22 +352,22 @@
             <!-- Copyright -->
             <div class="text-center mb-8">
                 <p class="text-white font-bold tracking-[0.1em] text-sm md:text-md uppercase">
-                    © 2026 IEEE SPS KERALA CHAPTER. REGISTER NOW BEFORE IT'S TOO LATE!
+                    © 2026 . DEPLOY 303 . REGISTER NOW BEFORE IT'S TOO LATE!
                 </p>
             </div>
 
             <!-- Footer Links -->
             <div class="flex flex-wrap justify-center gap-4 md:gap-8 border-t border-white/10 pt-6 mt-6">
-                <a href="#"
+                <a href="https://ieee.ceal.in/" target="_blank" rel="noopener"
                     class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
-                    SPS KERALA CHAPTER</a>
-                <a href="#"
+                    SB CEAL</a>
+                <a href="https://ieeembitssb.netlify.app/" target="_blank" rel="noopener"
                     class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
-                    SBC TKMCE</a>
-                <a href="#"
+                    SB MBITS</a>
+                <a href="https://signalprocessingsociety.org/" target="_blank" rel="noopener"
                     class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
                     SIGNAL PROCESSING SOCIETY</a>
-                <a href="#"
+                <a href="https://ieeekerala.org/" target="_blank" rel="noopener"
                     class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
                     KERALA SECTION</a>
             </div>
@@ -409,6 +418,81 @@
         menuBtn?.addEventListener('click', () => menu.classList.remove('hidden'));
         closeBtn?.addEventListener('click', () => menu.classList.add('hidden'));
         menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
+
+        // Dark Theme Toggle via Lantern
+        const lantern = document.getElementById('theme-toggle-lantern');
+        const htmlElement = document.documentElement;
+
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', currentTheme);
+
+        function toggleTheme() {
+            const theme = htmlElement.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+
+            // Update theme
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            // Animate lantern
+            if (lantern) {
+                lantern.style.transform = 'scale(1.2) rotate(10deg)';
+                lantern.style.filter = 'drop-shadow(0 0 25px rgba(188, 0, 45, 0.9))';
+
+                setTimeout(() => {
+                    lantern.style.transform = '';
+                    lantern.style.filter = '';
+                }, 400);
+            }
+        }
+
+        // Add click handler to lantern
+        lantern?.addEventListener('click', toggleTheme);
+
+        // Add keyboard accessibility
+        lantern?.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleTheme();
+            }
+        });
+
+        // Make lantern focusable for accessibility
+        if (lantern) {
+            lantern.setAttribute('tabindex', '0');
+            lantern.setAttribute('role', 'button');
+            lantern.setAttribute('aria-label', 'Toggle dark theme');
+        }
+
+        // Navbar Logo Alternating Animation
+        const navbarLogo = document.getElementById('navbar-logo');
+        const logos = [
+            { src: './logos/iris-ceal-blue-main.png', height: 'h-8' },
+            { src: './logos/IEEE SB CEAL Full - Dark.png', height: 'h-6' } // Smaller
+        ];
+        let currentLogoIndex = 0;
+
+        function switchNavbarLogo() {
+            if (!navbarLogo) return;
+
+            // Add fade-out animation
+            navbarLogo.classList.add('fade-out');
+            navbarLogo.classList.remove('fade-in');
+
+            setTimeout(() => {
+                // Switch logo
+                currentLogoIndex = (currentLogoIndex + 1) % logos.length;
+                const currentLogo = logos[currentLogoIndex];
+                navbarLogo.src = currentLogo.src;
+
+                // Update size and add fade-in
+                navbarLogo.className = `${currentLogo.height} filter brightness-0 fade-in`;
+            }, 600); // Half of the 1.2s transition time
+        }
+
+        // Start the alternating animation every 8 seconds
+        setInterval(switchNavbarLogo, 8000);
 
         // Countdown with Smooth Transitions
         function updateCountdown() {

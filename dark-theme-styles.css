@@ -1,0 +1,75 @@
+/* Dark Theme Specific Styles */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .hero-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .hero-title:hover {
+    color: var(--crimson-red);
+}
+
+[data-theme="dark"] p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .countdown-value {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] #seconds {
+    color: var(--crimson-red);
+}
+
+[data-theme="dark"] .premium-glass {
+    background: rgba(30, 30, 30, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .btn-premium {
+    color: var(--text-primary);
+    border-color: var(--crimson-red);
+}
+
+[data-theme="dark"] section {
+    background: transparent;
+}
+
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-white\/40 {
+    background: rgba(20, 20, 20, 0.4) !important;
+}
+
+[data-theme="dark"] footer {
+    background: linear-gradient(to bottom, #1A0006, #0A0003) !important;
+}
+
+[data-theme="dark"] .nav-item {
+    color: var(--text-primary);
+}
+
+/* Enhanced Lantern Interaction */
+#theme-toggle-lantern {
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        filter 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#theme-toggle-lantern:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(188, 0, 45, 0.8));
+}
+
+#theme-toggle-lantern:active {
+    transform: scale(0.95);
+}
+
+#theme-toggle-lantern:focus-visible {
+    outline: 2px solid var(--crimson-red);
+    outline-offset: 4px;
+    border-radius: 8px;
+}

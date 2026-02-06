@@ -36,19 +36,34 @@ img {
         opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+/* Theme Color Variables */
+:root {
+    --bg-primary: #FCF9F2;
+    --text-primary: #1A1A1A;
+    --text-secondary: #6B7280;
+    --theme-transition: background-color 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+        color 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+[data-theme="dark"] {
+    --bg-primary: #0A0A0A;
+    --text-primary: #F5F5F5;
+    --text-secondary: #9CA3AF;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--antique-white);
+    background-color: var(--bg-primary);
     background-image: var(--asanoha);
-    color: var(--ink-black);
+    color: var(--text-primary);
     line-height: 1.6;
     position: relative;
     overflow-x: hidden;
-    transition: padding-bottom 0.3s ease;
+    transition: var(--theme-transition), padding-bottom 0.3s ease;
 }
 
 /* Dynamic Background Layer */
@@ -620,4 +635,183 @@ section {
 .petal {
     transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
         transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* ========================================
+   DARK THEME STYLES
+   ======================================== */
+
+/* Dark Theme Text & Headings */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .hero-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .hero-title:hover {
+    color: var(--crimson-red);
+}
+
+[data-theme="dark"] p {
+    color: var(--text-secondary);
+}
+
+/* Dark Theme Countdown */
+[data-theme="dark"] .countdown-value {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] #seconds {
+    color: var(--crimson-red);
+}
+
+/* Dark Theme Glass Elements */
+[data-theme="dark"] .premium-glass {
+    background: rgba(30, 30, 30, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Theme Buttons */
+[data-theme="dark"] .btn-premium {
+    color: var(--text-primary);
+    border-color: var(--crimson-red);
+}
+
+/* Dark Theme Sections */
+[data-theme="dark"] section {
+    background: transparent;
+}
+
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-white\/40 {
+    background: rgba(20, 20, 20, 0.4) !important;
+}
+
+/* Dark Theme Footer */
+[data-theme="dark"] footer {
+    background: linear-gradient(to bottom, #1A0006, #0A0003) !important;
+}
+
+/* Dark Theme Navigation */
+[data-theme="dark"] .nav-item {
+    color: var(--text-primary);
+}
+
+/* Dark Theme Logo Inversion */
+[data-theme="dark"] header img {
+    filter: brightness(0) invert(1) !important;
+}
+
+[data-theme="dark"] footer img {
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.8;
+}
+
+/* Enhanced Lantern Interaction */
+#theme-toggle-lantern {
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        filter 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#theme-toggle-lantern:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(188, 0, 45, 0.8));
+}
+
+#theme-toggle-lantern:active {
+    transform: scale(0.95);
+}
+
+#theme-toggle-lantern:focus-visible {
+    outline: 2px solid var(--crimson-red);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+/* Dark Theme Additional Coverage */
+[data-theme="dark"] .text-gray-600,
+[data-theme="dark"] .text-gray-400,
+[data-theme="dark"] .text-gray-700 {
+    color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .text-gray-900 {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .border-gray-100,
+[data-theme="dark"] .border-gray-200 {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .bg-gray-100 {
+    background-color: rgba(40, 40, 40, 0.5) !important;
+}
+
+[data-theme="dark"] .shadow-2xl,
+[data-theme="dark"] .shadow-lg,
+[data-theme="dark"] .shadow-sm {
+    box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Dark Theme Marquee Speakers */
+[data-theme="dark"] .animate-marquee h4,
+[data-theme="dark"] .animate-marquee .text-sm {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .animate-marquee .text-4xl {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Theme Poster Items */
+[data-theme="dark"] .poster-item {
+    background: rgba(20, 20, 20, 0.9);
+}
+
+/* Dark Theme Border Colors */
+[data-theme="dark"] .border-y,
+[data-theme="dark"] .border-t-4 {
+    border-color: rgba(188, 0, 45, 0.3) !important;
+}
+
+/* Footer Red Text Styling */
+footer p,
+footer a {
+    color: #BC002D !important;
+}
+
+/* Footer Link Boxes - Red Background */
+footer a.px-4 {
+    background: #BC002D !important;
+    border-color: #BC002D !important;
+    color: white !important;
+}
+
+footer a.px-4:hover {
+    background: #FF0039 !important;
+    border-color: #FF0039 !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Navbar Logo Transition */
+#navbar-logo {
+    transition: opacity 0.6s ease-in-out,
+        transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#navbar-logo.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+#navbar-logo.fade-in {
+    opacity: 1;
+    transform: scale(1);
 }
