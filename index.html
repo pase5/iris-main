@@ -2,363 +2,363 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>IRIS'26</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="theme.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>IRIS'26</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="theme.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-50">
-    <canvas id="antigravity-bg" class="fixed inset-0 pointer-events-none z-[-3]"></canvas>
-    <div class="bg-orb" style="top: -10%; left: -10%;"></div>
-    <div class="bg-orb" style="bottom: -10%; right: -10%; animation-delay: -5s;"></div>
-    <div id="petals-container"></div>
+	<canvas id="antigravity-bg" class="fixed inset-0 pointer-events-none z-[-3]"></canvas>
+	<div class="bg-orb" style="top: -10%; left: -10%;"></div>
+	<div class="bg-orb" style="bottom: -10%; right: -10%; animation-delay: -5s;"></div>
+	<div id="petals-container"></div>
 
-    <!-- Mobile Header -->
-    <header class="md:hidden fixed w-full z-50 px-6 py-4 flex justify-center">
-        <div
-            class="flex items-center justify-center premium-glass px-6 py-3 rounded-full border border-white/40 shadow-sm">
-            <img id="mobile-logo" src="./logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-7">
-        </div>
-    </header>
+	<!-- Mobile Header -->
+	<header class="md:hidden fixed w-full z-50 px-6 py-4 flex justify-center">
+		<div
+			class="flex items-center justify-center premium-glass px-6 py-3 rounded-full border border-white/40 shadow-sm">
+			<img id="mobile-logo" src="./logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-7">
+		</div>
+	</header>
 
-    <!-- Premium Header (Desktop) -->
-    <header class="hidden md:flex fixed w-full z-50 px-6 py-6 justify-center">
-        <div
-            class="container max-w-5xl flex justify-between items-center premium-glass px-8 py-3 rounded-full border border-white/40 shadow-sm transition-all duration-500 hover:shadow-lg">
-            <div class="flex items-center">
-                <img id="navbar-logo" src="./logos/iris-ceal-blue-main.png" alt="IRIS Logo" class="h-8">
-            </div>
+	<!-- Premium Header (Desktop) -->
+	<header class="hidden md:flex fixed w-full z-50 px-6 py-6 justify-center">
+		<div
+			class="container max-w-5xl flex justify-between items-center premium-glass px-8 py-3 rounded-full border border-white/40 shadow-sm transition-all duration-500 hover:shadow-lg">
+			<div class="flex items-center">
+				<img id="navbar-logo" src="./logos/iris-ceal-blue-main.png" alt="IRIS Logo" class="h-8">
+			</div>
 
-            <nav
-                class="hidden md:flex items-center space-x-12 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-900">
-                <a href="#about" class="nav-item">ABOUT</a>
-                <a href="#schedule" class="nav-item">ROADMAP</a>
-                <a href="https://thepase.ceal.in"
-                    class="px-8 py-3 bg-crimson-red text-white rounded-full hover:bg-black transition-all duration-500 shadow-lg">REGISTER</a>
-            </nav>
+			<nav
+				class="hidden md:flex items-center space-x-12 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-900">
+				<a href="#about" class="nav-item">ABOUT</a>
+				<a href="#schedule" class="nav-item">ROADMAP</a>
+				<a href="https://thepase.ceal.in"
+					class="px-8 py-3 bg-crimson-red text-white rounded-full hover:bg-black transition-all duration-500 shadow-lg">REGISTER</a>
+			</nav>
 
-            <!-- Logo only on Mobile -->
-            <div class="md:hidden flex items-center">
-                <img src="./logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-7">
-            </div>
-        </div>
-    </header>
+			<!-- Logo only on Mobile -->
+			<div class="md:hidden flex items-center">
+				<img src="./logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-7">
+			</div>
+		</div>
+	</header>
 
-    <!-- Hero Section -->
-    <main>
-        <section class="min-h-dvh flex items-center justify-center pt-40 px-8 relative overflow-hidden">
-            <!-- Japanese Background Decor -->
-            <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none opacity-5">
-                <svg viewBox="0 0 100 100" class="w-full h-full">
-                    <circle cx="50" cy="50" r="40" fill="none" stroke="#BC002D" stroke-width="0.1" />
-                    <path d="M50 10 L50 90 M10 50 L90 50" stroke="#BC002D" stroke-width="0.1" />
-                </svg>
-            </div>
+	<!-- Hero Section -->
+	<main>
+		<section class="min-h-dvh flex items-center justify-center pt-40 px-8 relative overflow-hidden">
+			<!-- Japanese Background Decor -->
+			<div
+				class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none opacity-5">
+				<svg viewBox="0 0 100 100" class="w-full h-full">
+					<circle cx="50" cy="50" r="40" fill="none" stroke="#BC002D" stroke-width="0.1" />
+					<path d="M50 10 L50 90 M10 50 L90 50" stroke="#BC002D" stroke-width="0.1" />
+				</svg>
+			</div>
 
-            <!-- Sakura Blossom Branch with Lanterns -->
-            <div class="sakura-branch-container">
-                <!-- Main Branch -->
-                <svg class="sakura-branch" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Branch path -->
-                    <path class="branch-main" d="M 50,50 Q 200,80 400,150 T 750,200" stroke="#3d2817" stroke-width="12"
-                        fill="none" stroke-linecap="round" />
-                    <path class="branch-sub" d="M 200,80 Q 250,120 300,180" stroke="#3d2817" stroke-width="8"
-                        fill="none" stroke-linecap="round" />
-                    <path class="branch-sub" d="M 400,150 Q 420,200 450,260" stroke="#3d2817" stroke-width="8"
-                        fill="none" stroke-linecap="round" />
+			<!-- Sakura Blossom Branch with Lanterns -->
+			<div class="sakura-branch-container">
+				<!-- Main Branch -->
+				<svg class="sakura-branch" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+					<!-- Branch path -->
+					<path class="branch-main" d="M 50,50 Q 200,80 400,150 T 750,200" stroke="#3d2817" stroke-width="12"
+						fill="none" stroke-linecap="round" />
+					<path class="branch-sub" d="M 200,80 Q 250,120 300,180" stroke="#3d2817" stroke-width="8"
+						fill="none" stroke-linecap="round" />
+					<path class="branch-sub" d="M 400,150 Q 420,200 450,260" stroke="#3d2817" stroke-width="8"
+						fill="none" stroke-linecap="round" />
 
-                    <!-- Sakura Blossoms -->
-                    <g class="blossom-cluster" data-delay="0">
-                        <circle cx="180" cy="90" r="18" fill="#ff4d2e" opacity="0.95" />
-                        <circle cx="195" cy="85" r="15" fill="#ff6347" opacity="0.9" />
-                        <circle cx="200" cy="100" r="16" fill="#ff7856" opacity="0.95" />
-                        <circle cx="185" cy="105" r="14" fill="#ff5c3d" opacity="0.95" />
-                        <circle cx="170" cy="95" r="15" fill="#ff4520" opacity="0.9" />
-                    </g>
+					<!-- Sakura Blossoms -->
+					<g class="blossom-cluster" data-delay="0">
+						<circle cx="180" cy="90" r="18" fill="#ff4d2e" opacity="0.95" />
+						<circle cx="195" cy="85" r="15" fill="#ff6347" opacity="0.9" />
+						<circle cx="200" cy="100" r="16" fill="#ff7856" opacity="0.95" />
+						<circle cx="185" cy="105" r="14" fill="#ff5c3d" opacity="0.95" />
+						<circle cx="170" cy="95" r="15" fill="#ff4520" opacity="0.9" />
+					</g>
 
-                    <g class="blossom-cluster" data-delay="0.3">
-                        <circle cx="320" cy="165" r="20" fill="#ff4d2e" opacity="0.95" />
-                        <circle cx="338" cy="158" r="17" fill="#ff6347" opacity="0.9" />
-                        <circle cx="345" cy="175" r="18" fill="#ff7856" opacity="0.95" />
-                        <circle cx="328" cy="182" r="16" fill="#ff5c3d" opacity="0.95" />
-                        <circle cx="310" cy="172" r="17" fill="#ff4520" opacity="0.9" />
-                    </g>
+					<g class="blossom-cluster" data-delay="0.3">
+						<circle cx="320" cy="165" r="20" fill="#ff4d2e" opacity="0.95" />
+						<circle cx="338" cy="158" r="17" fill="#ff6347" opacity="0.9" />
+						<circle cx="345" cy="175" r="18" fill="#ff7856" opacity="0.95" />
+						<circle cx="328" cy="182" r="16" fill="#ff5c3d" opacity="0.95" />
+						<circle cx="310" cy="172" r="17" fill="#ff4520" opacity="0.9" />
+					</g>
 
-                    <g class="blossom-cluster" data-delay="0.6">
-                        <circle cx="500" cy="185" r="22" fill="#ff4d2e" opacity="0.95" />
-                        <circle cx="520" cy="178" r="19" fill="#ff6347" opacity="0.9" />
-                        <circle cx="528" cy="196" r="20" fill="#ff7856" opacity="0.95" />
-                        <circle cx="510" cy="205" r="18" fill="#ff5c3d" opacity="0.95" />
-                        <circle cx="490" cy="195" r="19" fill="#ff4520" opacity="0.9" />
-                    </g>
+					<g class="blossom-cluster" data-delay="0.6">
+						<circle cx="500" cy="185" r="22" fill="#ff4d2e" opacity="0.95" />
+						<circle cx="520" cy="178" r="19" fill="#ff6347" opacity="0.9" />
+						<circle cx="528" cy="196" r="20" fill="#ff7856" opacity="0.95" />
+						<circle cx="510" cy="205" r="18" fill="#ff5c3d" opacity="0.95" />
+						<circle cx="490" cy="195" r="19" fill="#ff4520" opacity="0.9" />
+					</g>
 
-                    <g class="blossom-cluster" data-delay="0.9">
-                        <circle cx="650" cy="205" r="20" fill="#ff4d2e" opacity="0.95" />
-                        <circle cx="668" cy="200" r="17" fill="#ff6347" opacity="0.9" />
-                        <circle cx="675" cy="215" r="18" fill="#ff7856" opacity="0.95" />
-                        <circle cx="660" cy="222" r="16" fill="#ff5c3d" opacity="0.95" />
-                        <circle cx="645" cy="215" r="17" fill="#ff4520" opacity="0.9" />
-                    </g>
-                </svg>
+					<g class="blossom-cluster" data-delay="0.9">
+						<circle cx="650" cy="205" r="20" fill="#ff4d2e" opacity="0.95" />
+						<circle cx="668" cy="200" r="17" fill="#ff6347" opacity="0.9" />
+						<circle cx="675" cy="215" r="18" fill="#ff7856" opacity="0.95" />
+						<circle cx="660" cy="222" r="16" fill="#ff5c3d" opacity="0.95" />
+						<circle cx="645" cy="215" r="17" fill="#ff4520" opacity="0.9" />
+					</g>
+				</svg>
 
-                <!-- Floating Petals for Wind Effect -->
-                <div class="floating-petals">
-                    <div class="petal" style="left: 15%; animation-delay: 0s;"></div>
-                    <div class="petal" style="left: 30%; animation-delay: 2s;"></div>
-                    <div class="petal" style="left: 45%; animation-delay: 4s;"></div>
-                    <div class="petal" style="left: 60%; animation-delay: 1s;"></div>
-                    <div class="petal" style="left: 75%; animation-delay: 3s;"></div>
-                    <div class="petal" style="left: 85%; animation-delay: 5s;"></div>
-                </div>
+				<!-- Floating Petals for Wind Effect -->
+				<div class="floating-petals">
+					<div class="petal" style="left: 15%; animation-delay: 0s;"></div>
+					<div class="petal" style="left: 30%; animation-delay: 2s;"></div>
+					<div class="petal" style="left: 45%; animation-delay: 4s;"></div>
+					<div class="petal" style="left: 60%; animation-delay: 1s;"></div>
+					<div class="petal" style="left: 75%; animation-delay: 3s;"></div>
+					<div class="petal" style="left: 85%; animation-delay: 5s;"></div>
+				</div>
 
-                <!-- Hanging Lanterns -->
-                <div class="lantern" style="left: 25%; top: 15%;">
-                    <div class="lantern-body"></div>
-                    <div class="lantern-tassel"></div>
-                </div>
+				<!-- Hanging Lanterns -->
+				<div class="lantern" style="left: 25%; top: 15%;">
+					<div class="lantern-body"></div>
+					<div class="lantern-tassel"></div>
+				</div>
 
-                <div class="lantern" style="left: 75%; top: 28%;">
-                    <div class="lantern-body"></div>
-                    <div class="lantern-tassel"></div>
-                </div>
-            </div>
+				<div class="lantern" style="left: 75%; top: 28%;">
+					<div class="lantern-body"></div>
+					<div class="lantern-tassel"></div>
+				</div>
+			</div>
 
-            <div class="container max-w-6xl relative z-10 text-center">
-                <div class="reveal-up">
+			<div class="container max-w-6xl relative z-10 text-center">
+				<div class="reveal-up">
 
-                    <h1
-                        class="text-5xl md:text-9xl mb-8 leading-tight tracking-tight text-[#1A1A1A] hero-title inline-block">
-                        IRIS <span class="italic font-light">'26</span>
-                    </h1>
-                    <div class="w-24 h-px bg-[#BC002D]/30 mx-auto mb-12"></div>
-                    <p
-                        class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed font-light italic mb-12">
-                        "An insightful reflection on Signal Processing, AI, and the aesthetics of emerging technology."
-                    </p>
-                    <div class="flex flex-wrap justify-center gap-6">
-                        <a href="https://thepase.ceal.in" class="btn-premium">RESERVE SEAT</a>
-                        <div class="flex flex-wrap justify-center gap-4">
-                            <a href="https://thepase.ceal.in"
-                                class="btn-norm px-6 py-3 border border-gray-300 text-[10px] font-bold uppercase tracking-widest text-gray-700 hover:bg-[#BC002D] hover:text-white transition-all">SB
-                                CEAL</a>
-                            <a href="https://thepase.ceal.in"
-                                class="btn-norm px-6 py-3 border border-gray-300 text-[10px] font-bold uppercase tracking-widest text-gray-700 hover:bg-[#BC002D] hover:text-white transition-all">SB
-                                MBITS</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+					<h1
+						class="text-5xl md:text-9xl mb-8 leading-tight tracking-tight text-[#1A1A1A] hero-title inline-block">
+						IRIS <span class="italic font-light">'26</span>
+					</h1>
+					<div class="w-24 h-px bg-[#BC002D]/30 mx-auto mb-12"></div>
+					<p
+						class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed font-light italic mb-12">
+						"An insightful reflection on Signal Processing, AI, and the aesthetics of emerging technology."
+					</p>
+					<div class="flex flex-wrap justify-center gap-6">
+						<a href="https://thepase.ceal.in" class="btn-premium">RESERVE SEAT</a>
+						<div class="flex flex-wrap justify-center gap-4">
+							<a href="https://thepase.ceal.in"
+								class="btn-norm px-6 py-3 border border-gray-300 text-[10px] font-bold uppercase tracking-widest text-gray-700 hover:bg-[#BC002D] hover:text-white transition-all">SB
+								CEAL</a>
+							<a href="https://thepase.ceal.in"
+								class="btn-norm px-6 py-3 border border-gray-300 text-[10px] font-bold uppercase tracking-widest text-gray-700 hover:bg-[#BC002D] hover:text-white transition-all">SB
+								MBITS</a>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <!-- Floating Lanterns (SVG) - Theme Toggle -->
-            <div class="absolute bottom-10 right-10 md:right-20 hidden md:block">
-                <svg id="theme-toggle-lantern" width="60" height="100" viewBox="0 0 60 100" class="lantern-glow"
-                    style="cursor: pointer;">
-                    <rect x="15" y="0" width="30" height="60" rx="4" fill="#BC002D" />
-                    <line x1="30" y1="60" x2="30" y2="100" stroke="#1A1A1A" stroke-width="1" />
-                    <text x="22" y="38" fill="white" font-size="20" font-family="serif">愛</text>
-                </svg>
-            </div>
-        </section>
+			<!-- Floating Lanterns (SVG) - Theme Toggle -->
+			<div class="absolute bottom-10 right-10 md:right-20 hidden md:block">
+				<svg id="theme-toggle-lantern" width="60" height="100" viewBox="0 0 60 100" class="lantern-glow"
+					style="cursor: pointer;">
+					<rect x="15" y="0" width="30" height="60" rx="4" fill="#BC002D" />
+					<line x1="30" y1="60" x2="30" y2="100" stroke="#1A1A1A" stroke-width="1" />
+					<text x="22" y="38" fill="white" font-size="20" font-family="serif">愛</text>
+				</svg>
+			</div>
+		</section>
 
-        <!-- About Section -->
-        <section id="about" class="section-ma bg-white/40">
-            <div class="container max-w-5xl mx-auto px-8">
-                <div class="grid md:grid-cols-2 gap-20 items-center">
-                    <div class="reveal-up">
-                        <h2 class="text-4xl md:text-5xl mb-8 text-[#1A1A1A]">Reflection <br /><span
-                                class="text-[#BC002D] italic">of Excellence</span></h2>
-                        <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                            Experience a transformative three-day hybrid journey at MBITS Kothamangalam from March 6th
-                            to 8th, 2026. IRIS 2026 brings together global experts and ambitious students to explore the
-                            intersection of Signal Processing and Artificial Intelligence.
-                        </p>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 max-w-xl mx-auto md:mx-0">
-                            <div class="text-center">
-                                <span id="days"
-                                    class="text-5xl md:text-7xl countdown-value text-gray-900 block leading-tight">--</span>
-                                <span
-                                    class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-[#BC002D] font-bold mt-2 block">Days</span>
-                            </div>
-                            <div class="text-center">
-                                <span id="hours"
-                                    class="text-5xl md:text-7xl countdown-value text-gray-900 block leading-tight">--</span>
-                                <span
-                                    class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-[#BC002D] font-bold mt-2 block">Hours</span>
-                            </div>
-                            <div class="text-center">
-                                <span id="minutes"
-                                    class="text-5xl md:text-7xl countdown-value text-gray-900 block leading-tight">--</span>
-                                <span
-                                    class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-[#BC002D] font-bold mt-2 block">Minutes</span>
-                            </div>
-                            <div class="text-center">
-                                <span id="seconds"
-                                    class="text-5xl md:text-7xl countdown-value text-[#BC002D] block leading-tight">--</span>
-                                <span
-                                    class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold mt-2 block">Seconds</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reveal-up relative">
-                        <div
-                            class="aspect-[4/5] bg-gray-100 rounded-sm overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#BC002D]/20 to-transparent"></div>
-                            <img src="./images/Frame 1261153514.png" alt="Abstract Background"
-                                class="object-cover w-full h-full opacity-60">
-                        </div>
-                        <div class="absolute -bottom-10 -left-10 w-40 h-40 border border-[#BC002D]/20 z-[-1]"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+		<!-- About Section -->
+		<section id="about" class="section-ma bg-white/40">
+			<div class="container max-w-5xl mx-auto px-8">
+				<div class="grid md:grid-cols-2 gap-20 items-center">
+					<div class="reveal-up">
+						<h2 class="text-4xl md:text-5xl mb-8 text-[#1A1A1A]">Reflection <br /><span
+								class="text-[#BC002D] italic">of Excellence</span></h2>
+						<p class="text-lg text-gray-600 leading-relaxed mb-8">
+							Experience a transformative three-day hybrid journey at MBITS Kothamangalam from March 6th
+							to 8th, 2026. IRIS 2026 brings together global experts and ambitious students to explore the
+							intersection of Signal Processing and Artificial Intelligence.
+						</p>
+						<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 max-w-xl mx-auto md:mx-0">
+							<div class="text-center">
+								<span id="days"
+									class="text-5xl md:text-7xl countdown-value text-gray-900 block leading-tight">--</span>
+								<span
+									class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-[#BC002D] font-bold mt-2 block">Days</span>
+							</div>
+							<div class="text-center">
+								<span id="hours"
+									class="text-5xl md:text-7xl countdown-value text-gray-900 block leading-tight">--</span>
+								<span
+									class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-[#BC002D] font-bold mt-2 block">Hours</span>
+							</div>
+							<div class="text-center">
+								<span id="minutes"
+									class="text-5xl md:text-7xl countdown-value text-gray-900 block leading-tight">--</span>
+								<span
+									class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-[#BC002D] font-bold mt-2 block">Minutes</span>
+							</div>
+							<div class="text-center">
+								<span id="seconds"
+									class="text-5xl md:text-7xl countdown-value text-[#BC002D] block leading-tight">--</span>
+								<span
+									class="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold mt-2 block">Seconds</span>
+							</div>
+						</div>
+					</div>
+					<div class="reveal-up relative">
+						<div
+							class="aspect-[4/5] bg-gray-100 rounded-sm overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl">
+							<div class="absolute inset-0 bg-gradient-to-t from-[#BC002D]/20 to-transparent"></div>
+							<img src="./images/Frame 1261153514.png" alt="Abstract Background"
+								class="object-cover w-full h-full opacity-60">
+						</div>
+						<div class="absolute -bottom-10 -left-10 w-40 h-40 border border-[#BC002D]/20 z-[-1]"></div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        <!-- Premium Speaker Carousel -->
-        <section class="speaker-carousel-section py-16 overflow-hidden relative">
-            <div class="speaker-carousel-track">
-                <!-- Speaker Card 1 -->
-                <div class="speaker-card">
-                    <div class="speaker-image-wrapper">
-                        <img src="mine.png" alt="Aiswarya Lakshmi" class="speaker-image">
-                    </div>
-                    <div class="speaker-info">
-                        <span class="speaker-number">01</span>
-                        <h4 class="speaker-name">Aiswarya Lakshmi</h4>
-                        <p class="speaker-role">IIT Palakkad</p>
-                    </div>
-                </div>
+		<!-- Premium Speaker Carousel -->
+		<section class="speaker-carousel-section py-16 overflow-hidden relative">
+			<div class="speaker-carousel-track">
+				<!-- Speaker Card 1 -->
+				<div class="speaker-card">
+					<div class="speaker-image-wrapper">
+						<img src="mine.png" alt="Aiswarya Lakshmi" class="speaker-image">
+					</div>
+					<div class="speaker-info">
+						<span class="speaker-number">01</span>
+						<h4 class="speaker-name">Aiswarya Lakshmi</h4>
+						<p class="speaker-role">IIT Palakkad</p>
+					</div>
+				</div>
 
-                <!-- Speaker Card 2 -->
-                <div class="speaker-card">
-                    <div class="speaker-image-wrapper">
-                        <img src="mine.png" alt="Dhanushkumar R" class="speaker-image">
-                    </div>
-                    <div class="speaker-info">
-                        <span class="speaker-number">02</span>
-                        <h4 class="speaker-name">Dhanushkumar R</h4>
-                        <p class="speaker-role">Microsoft Ambassador</p>
-                    </div>
-                </div>
+				<!-- Speaker Card 2 -->
+				<div class="speaker-card">
+					<div class="speaker-image-wrapper">
+						<img src="mine.png" alt="Dhanushkumar R" class="speaker-image">
+					</div>
+					<div class="speaker-info">
+						<span class="speaker-number">02</span>
+						<h4 class="speaker-name">Dhanushkumar R</h4>
+						<p class="speaker-role">Microsoft Ambassador</p>
+					</div>
+				</div>
 
-                <!-- Speaker Card 3 -->
-                <div class="speaker-card">
-                    <div class="speaker-image-wrapper">
-                        <img src="mine.png" alt="Abhijith Benny" class="speaker-image">
-                    </div>
-                    <div class="speaker-info">
-                        <span class="speaker-number">03</span>
-                        <h4 class="speaker-name">Abhijith Benny</h4>
-                        <p class="speaker-role">Digital Core Tech</p>
-                    </div>
-                </div>
+				<!-- Speaker Card 3 -->
+				<div class="speaker-card">
+					<div class="speaker-image-wrapper">
+						<img src="mine.png" alt="Abhijith Benny" class="speaker-image">
+					</div>
+					<div class="speaker-info">
+						<span class="speaker-number">03</span>
+						<h4 class="speaker-name">Abhijith Benny</h4>
+						<p class="speaker-role">Digital Core Tech</p>
+					</div>
+				</div>
 
-                <!-- Speaker Card 4 -->
-                <div class="speaker-card">
-                    <div class="speaker-image-wrapper">
-                        <img src="mine.png" alt="Akhil Raj" class="speaker-image">
-                    </div>
-                    <div class="speaker-info">
-                        <span class="speaker-number">04</span>
-                        <h4 class="speaker-name">Akhil Raj</h4>
-                        <p class="speaker-role">TCS Cybersecurity</p>
-                    </div>
-                </div>
+				<!-- Speaker Card 4 -->
+				<div class="speaker-card">
+					<div class="speaker-image-wrapper">
+						<img src="mine.png" alt="Akhil Raj" class="speaker-image">
+					</div>
+					<div class="speaker-info">
+						<span class="speaker-number">04</span>
+						<h4 class="speaker-name">Akhil Raj</h4>
+						<p class="speaker-role">TCS Cybersecurity</p>
+					</div>
+				</div>
 
-                <!-- Duplicate Set for Seamless Loop -->
-                <div class="speaker-card">
-                    <div class="speaker-image-wrapper">
-                        <img src="mine.png" alt="Aiswarya Lakshmi" class="speaker-image">
-                    </div>
-                    <div class="speaker-info">
-                        <span class="speaker-number">01</span>
-                        <h4 class="speaker-name">Aiswarya Lakshmi</h4>
-                        <p class="speaker-role">IIT Palakkad</p>
-                    </div>
-                </div>
+				<!-- Duplicate Set for Seamless Loop -->
+				<div class="speaker-card">
+					<div class="speaker-image-wrapper">
+						<img src="mine.png" alt="Aiswarya Lakshmi" class="speaker-image">
+					</div>
+					<div class="speaker-info">
+						<span class="speaker-number">01</span>
+						<h4 class="speaker-name">Aiswarya Lakshmi</h4>
+						<p class="speaker-role">IIT Palakkad</p>
+					</div>
+				</div>
 
-                <div class="speaker-card">
-                    <div class="speaker-image-wrapper">
-                        <img src="mine.png" alt="Dhanushkumar R" class="speaker-image">
-                    </div>
-                    <div class="speaker-info">
-                        <span class="speaker-number">02</span>
-                        <h4 class="speaker-name">Dhanushkumar R</h4>
-                        <p class="speaker-role">Microsoft Ambassador</p>
-                    </div>
-                </div>
+				<div class="speaker-card">
+					<div class="speaker-image-wrapper">
+						<img src="mine.png" alt="Dhanushkumar R" class="speaker-image">
+					</div>
+					<div class="speaker-info">
+						<span class="speaker-number">02</span>
+						<h4 class="speaker-name">Dhanushkumar R</h4>
+						<p class="speaker-role">Microsoft Ambassador</p>
+					</div>
+				</div>
 
-                <div class="speaker-card">
-                    <div class="speaker-image-wrapper">
-                        <img src="mine.png" alt="Abhijith Benny" class="speaker-image">
-                    </div>
-                    <div class="speaker-info">
-                        <span class="speaker-number">03</span>
-                        <h4 class="speaker-name">Abhijith Benny</h4>
-                        <p class="speaker-role">Digital Core Tech</p>
-                    </div>
-                </div>
+				<div class="speaker-card">
+					<div class="speaker-image-wrapper">
+						<img src="mine.png" alt="Abhijith Benny" class="speaker-image">
+					</div>
+					<div class="speaker-info">
+						<span class="speaker-number">03</span>
+						<h4 class="speaker-name">Abhijith Benny</h4>
+						<p class="speaker-role">Digital Core Tech</p>
+					</div>
+				</div>
 
-                <div class="speaker-card">
-                    <div class="speaker-image-wrapper">
-                        <img src="mine.png" alt="Akhil Raj" class="speaker-image">
-                    </div>
-                    <div class="speaker-info">
-                        <span class="speaker-number">04</span>
-                        <h4 class="speaker-name">Akhil Raj</h4>
-                        <p class="speaker-role">TCS Cybersecurity</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+				<div class="speaker-card">
+					<div class="speaker-image-wrapper">
+						<img src="mine.png" alt="Akhil Raj" class="speaker-image">
+					</div>
+					<div class="speaker-info">
+						<span class="speaker-number">04</span>
+						<h4 class="speaker-name">Akhil Raj</h4>
+						<p class="speaker-role">TCS Cybersecurity</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        <!-- Poster Focus Gallery -->
-        <section id="gallery" class="section-ma overflow-hidden">
-            <div class="container max-w-6xl mx-auto px-8">
-                <div class="text-center mb-16 reveal-up">
-                    <h2 class="text-4xl md:text-6xl mb-4 italic font-light">The Visuals</h2>
-                    <span class="text-[#BC002D] text-xs font-bold tracking-[0.4em] uppercase">Event Posters</span>
-                </div>
+		<!-- Poster Focus Gallery -->
+		<section id="gallery" class="section-ma overflow-hidden">
+			<div class="container max-w-6xl mx-auto px-8">
+				<div class="text-center mb-16 reveal-up">
+					<h2 class="text-4xl md:text-6xl mb-4 italic font-light">The Visuals</h2>
+					<span class="text-[#BC002D] text-xs font-bold tracking-[0.4em] uppercase">Event Posters</span>
+				</div>
 
-                <div class="poster-carousel">
-                    <!-- Poster 1 -->
-                    <div class="poster-item active">
-                        <img src="./images/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
-                        <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+				<div class="poster-carousel">
+					<!-- Poster 1 -->
+					<div class="poster-item active">
+						<img src="./images/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
+						<div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
 
-                        </div>
-                    </div>
-                    <!-- Poster 2 -->
-                    <div class="poster-item next">
-                        <img src="./images/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
-                        <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
-
-
-
-                        </div>
-                    </div>
-                    <!-- Poster 3 -->
-                    <div class="poster-item far-right">
-                        <img src="./images/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
+						</div>
+					</div>
+					<!-- Poster 2 -->
+					<div class="poster-item next">
+						<img src="./images/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
+						<div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
 
 
-                    </div>
-                    <!-- Poster 1 -->
-                    <div class="poster-item active">
-                        <img src="./images/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
-                        <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
+						</div>
+					</div>
+					<!-- Poster 3 -->
+					<div class="poster-item far-right">
+						<img src="./images/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
 
-        <!-- Roadmap -->
-        <!-- <section id="schedule" class="section-ma">
+
+					</div>
+					<!-- Poster 1 -->
+					<div class="poster-item active">
+						<img src="./images/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
+						<div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<!-- Roadmap -->
+		<!-- <section id="schedule" class="section-ma">
             <div class="container max-w-6xl mx-auto px-8">
                 <div class="text-center mb-24 reveal-up">
                     <h2 class="text-4xl md:text-6xl mb-4">Event <span class="italic font-light">Roadmap</span></h2>
@@ -408,463 +408,465 @@
                 </div>
             </div>
         </section> -->
-    </main>
+	</main>
 
-    <!-- Footer -->
-    <footer class="relative py-12 overflow-hidden border-t-4 border-[#BC002D]">
-        <!-- Background Image -->
-        <div class="absolute inset-0 z-0">
-            <img src="./baground.png" class="w-full h-full object-cover opacity-40" alt="Footer Background">
-        </div>
+	<!-- Footer -->
+	<footer class="relative py-12 overflow-hidden border-t-4 border-[#BC002D]">
+		<!-- Background Image -->
+		<div class="absolute inset-0 z-0">
+			<img src="./baground.png" class="w-full h-full object-cover opacity-40" alt="Footer Background">
+		</div>
 
-        <!-- Comic Background Overlay -->
-        <div class="absolute inset-0 opacity-30 mix-blend-overlay z-[1]">
-            <img src="./images/comic-footer-bg.png" class="w-full h-full object-cover">
-        </div>
+		<!-- Comic Background Overlay -->
+		<div class="absolute inset-0 opacity-30 mix-blend-overlay z-[1]">
+			<img src="./images/comic-footer-bg.png" class="w-full h-full object-cover">
+		</div>
 
-        <div class="container max-w-6xl mx-auto px-8 relative z-10">
-            <!-- Social Icons -->
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="https://thepase.ceal.in" target="_blank" rel="noopener"
-                    class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
-                    <i class="fab fa-linkedin-in text-base"></i>
-                </a>
-                <a href="https://thepase.ceal.in" target="_blank" rel="noopener"
-                    class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
-                    <i class="fab fa-instagram text-base"></i>
-                </a>
-                <a href="https://thepase.ceal.in" target="_blank" rel="noopener"
-                    class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
-                    <i class="fab fa-facebook-f text-base"></i>
-                </a>
-                <a href="https://thepase.ceal.in" target="_blank" rel="noopener"
-                    class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
-                    <i class="fab fa-discord text-base"></i>
-                </a>
-                <a href="https://thepase.ceal.in" target="_blank" rel="noopener"
-                    class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
-                    <i class="fas fa-envelope text-base"></i>
-                </a>
-            </div>
+		<div class="container max-w-6xl mx-auto px-8 relative z-10">
+			<!-- Social Icons -->
+			<div class="flex justify-center space-x-6 mb-8">
+				<a href="https://thepase.ceal.in" target="_blank" rel="noopener"
+					class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
+					<i class="fab fa-linkedin-in text-base"></i>
+				</a>
+				<a href="https://thepase.ceal.in" target="_blank" rel="noopener"
+					class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
+					<i class="fab fa-instagram text-base"></i>
+				</a>
+				<a href="https://thepase.ceal.in" target="_blank" rel="noopener"
+					class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
+					<i class="fab fa-facebook-f text-base"></i>
+				</a>
+				<a href="https://thepase.ceal.in" target="_blank" rel="noopener"
+					class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
+					<i class="fab fa-discord text-base"></i>
+				</a>
+				<a href="https://thepase.ceal.in" target="_blank" rel="noopener"
+					class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black hover:bg-[#BC002D] hover:text-white transition-all duration-300 shadow-xl">
+					<i class="fas fa-envelope text-base"></i>
+				</a>
+			</div>
 
-            <!-- Logos -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
-                <img src="./logos/sps-logo-color.png" alt="SPS Logo" class="h-12 brightness-0 invert opacity-80">
-                <img src="./logos/ieee-mb-blue.png" alt="IEEE Logo" class="h-12 brightness-0 invert opacity-80">
-            </div>
+			<!-- Logos -->
+			<div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+				<img src="./logos/sps-logo-color.png" alt="SPS Logo" class="h-12 brightness-0 invert opacity-80">
+				<img src="./logos/ieee-mb-blue.png" alt="IEEE Logo" class="h-12 brightness-0 invert opacity-80">
+			</div>
 
-            <!-- Copyright -->
-            <div class="text-center mb-8">
-                <p class="text-white font-bold tracking-[0.1em] text-sm md:text-md uppercase">
-                    © 2026 . TRAIN303 . MAY THE FOSS BE WITH YOU!
-                </p>
-            </div>
+			<!-- Copyright -->
+			<div class="text-center mb-8">
+				<p class="text-white font-bold tracking-[0.1em] text-sm md:text-md uppercase">
+					© 2026 . <a class="train" href="https://github.com/zyndor1548">TRAIN303 </a> . MAY THE
+					FOSS BE WITH
+					YOU!
+				</p>
+			</div>
 
-            <!-- Footer Links -->
-            <div class="flex flex-wrap justify-center gap-4 md:gap-8 border-t border-white/10 pt-6 mt-6">
-                <a href="https://ieee.ceal.in/" target="_blank" rel="noopener"
-                    class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
-                    SB CEAL</a>
-                <a href="https://ieeembitssb.netlify.app/" target="_blank" rel="noopener"
-                    class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
-                    SB MBITS</a>
-                <a href="https://signalprocessingsociety.org/" target="_blank" rel="noopener"
-                    class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
-                    SIGNAL PROCESSING SOCIETY</a>
-                <a href="https://ieeekerala.org/" target="_blank" rel="noopener"
-                    class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
-                    KERALA SECTION</a>
-            </div>
-        </div>
-    </footer>
+			<!-- Footer Links -->
+			<div class="flex flex-wrap justify-center gap-4 md:gap-8 border-t border-white/10 pt-6 mt-6">
+				<a href="https://ieee.ceal.in/" target="_blank" rel="noopener"
+					class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
+					SB CEAL</a>
+				<a href="https://ieeembitssb.netlify.app/" target="_blank" rel="noopener"
+					class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
+					SB MBITS</a>
+				<a href="https://signalprocessingsociety.org/" target="_blank" rel="noopener"
+					class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
+					SIGNAL PROCESSING SOCIETY</a>
+				<a href="https://ieeekerala.org/" target="_blank" rel="noopener"
+					class="px-4 py-2 bg-black/40 backdrop-blur-md rounded border border-white/5 text-[10px] md:text-xs font-bold text-white uppercase tracking-widest hover:border-[#BC002D] transition-all">IEEE
+					KERALA SECTION</a>
+			</div>
+		</div>
+	</footer>
 
-    <!-- Speaker Modal Popup -->
-    <div id="speaker-modal" class="speaker-modal hidden">
-        <div class="speaker-modal-overlay"></div>
-        <div class="speaker-modal-content">
-            <button class="speaker-modal-close" aria-label="Close modal">
-                <i class="fas fa-times"></i>
-            </button>
+	<!-- Speaker Modal Popup -->
+	<div id="speaker-modal" class="speaker-modal hidden">
+		<div class="speaker-modal-overlay"></div>
+		<div class="speaker-modal-content">
+			<button class="speaker-modal-close" aria-label="Close modal">
+				<i class="fas fa-times"></i>
+			</button>
 
-            <div class="speaker-modal-body">
-                <!-- Left side - Speaker Number -->
-                <div class="speaker-modal-number-left">
-                    <span id="modal-number-left">01</span>
-                </div>
+			<div class="speaker-modal-body">
+				<!-- Left side - Speaker Number -->
+				<div class="speaker-modal-number-left">
+					<span id="modal-number-left">01</span>
+				</div>
 
-                <!-- Center - Speaker Photo and Info -->
-                <div class="speaker-modal-center">
-                    <div class="speaker-modal-header">
-                        <h3 id="modal-name-top">AISWARYA LAKSHMI</h3>
-                        <p id="modal-role-top">IIT PALAKKAD</p>
-                    </div>
+				<!-- Center - Speaker Photo and Info -->
+				<div class="speaker-modal-center">
+					<div class="speaker-modal-header">
+						<h3 id="modal-name-top">AISWARYA LAKSHMI</h3>
+						<p id="modal-role-top">IIT PALAKKAD</p>
+					</div>
 
-                    <div class="speaker-modal-image-container">
-                        <img id="modal-image" src="mine.png" alt="Speaker Photo" class="speaker-modal-image">
-                    </div>
+					<div class="speaker-modal-image-container">
+						<img id="modal-image" src="mine.png" alt="Speaker Photo" class="speaker-modal-image">
+					</div>
 
-                    <div class="speaker-modal-footer">
-                        <h3 id="modal-name-bottom">AISWARYA LAKSHMI</h3>
-                        <p id="modal-role-bottom">IIT PALAKKAD</p>
-                    </div>
-                </div>
+					<div class="speaker-modal-footer">
+						<h3 id="modal-name-bottom">AISWARYA LAKSHMI</h3>
+						<p id="modal-role-bottom">IIT PALAKKAD</p>
+					</div>
+				</div>
 
-                <!-- Right side - Speaker Number -->
-                <div class="speaker-modal-number-right">
-                    <span id="modal-number-right">01</span>
-                </div>
-            </div>
-        </div>
-    </div>
+				<!-- Right side - Speaker Number -->
+				<div class="speaker-modal-number-right">
+					<span id="modal-number-right">01</span>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- Mobile Menu (Hidden) -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] hidden flex-col items-center justify-center space-y-8">
-        <button id="menu-close" class="absolute top-10 right-10 text-2xl">&times;</button>
-        <a href="#about" class="text-2xl font-serif">About</a>
-        <a href="#schedule" class="text-2xl font-serif">Roadmap</a>
-        <a href="https://thepase.ceal.in" class="text-2xl font-serif text-[#BC002D]">Register</a>
-    </div>
+	<!-- Mobile Menu (Hidden) -->
+	<div id="mobile-menu" class="fixed inset-0 bg-white z-[60] hidden flex-col items-center justify-center space-y-8">
+		<button id="menu-close" class="absolute top-10 right-10 text-2xl">&times;</button>
+		<a href="#about" class="text-2xl font-serif">About</a>
+		<a href="#schedule" class="text-2xl font-serif">Roadmap</a>
+		<a href="https://thepase.ceal.in" class="text-2xl font-serif text-[#BC002D]">Register</a>
+	</div>
 
-    <!-- Floating Pill Nav (Mobile) -->
-    <nav class="pill-nav-container">
-        <a href="#" class="pill-nav-item active" data-section="hero">
-            <i class="fas fa-home"></i>
-            <span>Home</span>
-        </a>
-        <a href="#about" class="pill-nav-item" data-section="about">
-            <i class="fas fa-info-circle"></i>
-            <span>About</span>
-        </a>
-        <a href="#gallery" class="pill-nav-item" data-section="gallery">
-            <i class="fas fa-th-large"></i>
-            <span>Visuals</span>
-        </a>
-        <a href="#schedule" class="pill-nav-item" data-section="schedule">
-            <i class="fas fa-calendar-alt"></i>
-            <span>Roadmap</span>
-        </a>
-        <a href="https://thepase.ceal.in" class="pill-nav-item" style="color: #BC002D;">
-            <i class="fas fa-ticket-alt"></i>
-            <span>Join</span>
-        </a>
-    </nav>
+	<!-- Floating Pill Nav (Mobile) -->
+	<nav class="pill-nav-container">
+		<a href="#" class="pill-nav-item active" data-section="hero">
+			<i class="fas fa-home"></i>
+			<span>Home</span>
+		</a>
+		<a href="#about" class="pill-nav-item" data-section="about">
+			<i class="fas fa-info-circle"></i>
+			<span>About</span>
+		</a>
+		<a href="#gallery" class="pill-nav-item" data-section="gallery">
+			<i class="fas fa-th-large"></i>
+			<span>Visuals</span>
+		</a>
+		<a href="#schedule" class="pill-nav-item" data-section="schedule">
+			<i class="fas fa-calendar-alt"></i>
+			<span>Roadmap</span>
+		</a>
+		<a href="https://thepase.ceal.in" class="pill-nav-item" style="color: #BC002D;">
+			<i class="fas fa-ticket-alt"></i>
+			<span>Join</span>
+		</a>
+	</nav>
 
-    <!-- Scripts -->
-    <script src="petals.js"></script>
-    <script src="antigravity.js"></script>
-    <script>
-        // Menu Toggle
-        const menuBtn = document.getElementById('menu-toggle');
-        const closeBtn = document.getElementById('menu-close');
-        const menu = document.getElementById('mobile-menu');
+	<!-- Scripts -->
+	<script src="petals.js"></script>
+	<script src="antigravity.js"></script>
+	<script>
+		// Menu Toggle
+		const menuBtn = document.getElementById('menu-toggle');
+		const closeBtn = document.getElementById('menu-close');
+		const menu = document.getElementById('mobile-menu');
 
-        menuBtn?.addEventListener('click', () => menu.classList.remove('hidden'));
-        closeBtn?.addEventListener('click', () => menu.classList.add('hidden'));
-        menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
+		menuBtn?.addEventListener('click', () => menu.classList.remove('hidden'));
+		closeBtn?.addEventListener('click', () => menu.classList.add('hidden'));
+		menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
 
-        // Dark Theme Toggle via Lantern
-        const lantern = document.getElementById('theme-toggle-lantern');
-        const htmlElement = document.documentElement;
+		// Dark Theme Toggle via Lantern
+		const lantern = document.getElementById('theme-toggle-lantern');
+		const htmlElement = document.documentElement;
 
-        // Check for saved theme preference or default to 'light'
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        htmlElement.setAttribute('data-theme', currentTheme);
+		// Check for saved theme preference or default to 'light'
+		const currentTheme = localStorage.getItem('theme') || 'light';
+		htmlElement.setAttribute('data-theme', currentTheme);
 
-        function toggleTheme() {
-            const theme = htmlElement.getAttribute('data-theme');
-            const newTheme = theme === 'dark' ? 'light' : 'dark';
+		function toggleTheme() {
+			const theme = htmlElement.getAttribute('data-theme');
+			const newTheme = theme === 'dark' ? 'light' : 'dark';
 
-            // Update theme
-            htmlElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
+			// Update theme
+			htmlElement.setAttribute('data-theme', newTheme);
+			localStorage.setItem('theme', newTheme);
 
-            // Animate lantern
-            if (lantern) {
-                lantern.style.transform = 'scale(1.2) rotate(10deg)';
-                lantern.style.filter = 'drop-shadow(0 0 25px rgba(188, 0, 45, 0.9))';
+			// Animate lantern
+			if (lantern) {
+				lantern.style.transform = 'scale(1.2) rotate(10deg)';
+				lantern.style.filter = 'drop-shadow(0 0 25px rgba(188, 0, 45, 0.9))';
 
-                setTimeout(() => {
-                    lantern.style.transform = '';
-                    lantern.style.filter = '';
-                }, 400);
-            }
-        }
+				setTimeout(() => {
+					lantern.style.transform = '';
+					lantern.style.filter = '';
+				}, 400);
+			}
+		}
 
-        // Add click handler to lantern
-        lantern?.addEventListener('click', toggleTheme);
+		// Add click handler to lantern
+		lantern?.addEventListener('click', toggleTheme);
 
-        // Add keyboard accessibility
-        lantern?.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleTheme();
-            }
-        });
+		// Add keyboard accessibility
+		lantern?.addEventListener('keypress', (e) => {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault();
+				toggleTheme();
+			}
+		});
 
-        // Make lantern focusable for accessibility
-        if (lantern) {
-            lantern.setAttribute('tabindex', '0');
-            lantern.setAttribute('role', 'button');
-            lantern.setAttribute('aria-label', 'Toggle dark theme');
-        }
+		// Make lantern focusable for accessibility
+		if (lantern) {
+			lantern.setAttribute('tabindex', '0');
+			lantern.setAttribute('role', 'button');
+			lantern.setAttribute('aria-label', 'Toggle dark theme');
+		}
 
-        // Navbar Logo Alternating Animation (Desktop + Mobile)
-        const navbarLogo = document.getElementById('navbar-logo');
-        const mobileLogo = document.getElementById('mobile-logo');
-        const logos = [
-            { src: './logos/iris-ceal-blue-main.png', desktopHeight: 'h-8', mobileHeight: 'h-7' },
-            { src: './logos/IEEE SB CEAL Full - Dark.png', desktopHeight: 'h-6', mobileHeight: 'h-5' } // Smaller
-        ];
-        let currentLogoIndex = 0;
+		// Navbar Logo Alternating Animation (Desktop + Mobile)
+		const navbarLogo = document.getElementById('navbar-logo');
+		const mobileLogo = document.getElementById('mobile-logo');
+		const logos = [
+			{ src: './logos/iris-ceal-blue-main.png', desktopHeight: 'h-8', mobileHeight: 'h-7' },
+			{ src: './logos/IEEE SB CEAL Full - Dark.png', desktopHeight: 'h-6', mobileHeight: 'h-5' } // Smaller
+		];
+		let currentLogoIndex = 0;
 
-        function switchNavbarLogo() {
-            // Switch desktop logo
-            if (navbarLogo) {
-                navbarLogo.classList.add('fade-out');
-                navbarLogo.classList.remove('fade-in');
-            }
+		function switchNavbarLogo() {
+			// Switch desktop logo
+			if (navbarLogo) {
+				navbarLogo.classList.add('fade-out');
+				navbarLogo.classList.remove('fade-in');
+			}
 
-            // Switch mobile logo
-            if (mobileLogo) {
-                mobileLogo.classList.add('fade-out');
-                mobileLogo.classList.remove('fade-in');
-            }
+			// Switch mobile logo
+			if (mobileLogo) {
+				mobileLogo.classList.add('fade-out');
+				mobileLogo.classList.remove('fade-in');
+			}
 
-            setTimeout(() => {
-                // Switch logo index
-                currentLogoIndex = (currentLogoIndex + 1) % logos.length;
-                const currentLogo = logos[currentLogoIndex];
+			setTimeout(() => {
+				// Switch logo index
+				currentLogoIndex = (currentLogoIndex + 1) % logos.length;
+				const currentLogo = logos[currentLogoIndex];
 
-                // Update desktop logo
-                if (navbarLogo) {
-                    navbarLogo.src = currentLogo.src;
-                    navbarLogo.className = `${currentLogo.desktopHeight} fade-in`;
-                }
+				// Update desktop logo
+				if (navbarLogo) {
+					navbarLogo.src = currentLogo.src;
+					navbarLogo.className = `${currentLogo.desktopHeight} fade-in`;
+				}
 
-                // Update mobile logo
-                if (mobileLogo) {
-                    mobileLogo.src = currentLogo.src;
-                    mobileLogo.className = `${currentLogo.mobileHeight} fade-in`;
-                }
-            }, 600); // Half of the 1.2s transition time
-        }
+				// Update mobile logo
+				if (mobileLogo) {
+					mobileLogo.src = currentLogo.src;
+					mobileLogo.className = `${currentLogo.mobileHeight} fade-in`;
+				}
+			}, 600); // Half of the 1.2s transition time
+		}
 
-        // Start the alternating animation every 8 seconds
-        setInterval(switchNavbarLogo, 8000);
+		// Start the alternating animation every 8 seconds
+		setInterval(switchNavbarLogo, 8000);
 
-        // Countdown with Smooth Transitions
-        function updateCountdown() {
-            const eventDate = new Date('March 6, 2026 09:00:00').getTime();
-            const now = new Date().getTime();
-            const diff = eventDate - now;
+		// Countdown with Smooth Transitions
+		function updateCountdown() {
+			const eventDate = new Date('March 6, 2026 09:00:00').getTime();
+			const now = new Date().getTime();
+			const diff = eventDate - now;
 
-            const elements = {
-                days: document.getElementById('days'),
-                hours: document.getElementById('hours'),
-                minutes: document.getElementById('minutes'),
-                seconds: document.getElementById('seconds')
-            };
+			const elements = {
+				days: document.getElementById('days'),
+				hours: document.getElementById('hours'),
+				minutes: document.getElementById('minutes'),
+				seconds: document.getElementById('seconds')
+			};
 
-            if (diff < 0) {
-                Object.values(elements).forEach(el => {
-                    if (el) el.innerText = '00';
-                });
-                return;
-            }
+			if (diff < 0) {
+				Object.values(elements).forEach(el => {
+					if (el) el.innerText = '00';
+				});
+				return;
+			}
 
-            const values = {
-                days: Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0'),
-                hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0'),
-                minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0'),
-                seconds: Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0')
-            };
+			const values = {
+				days: Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0'),
+				hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0'),
+				minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0'),
+				seconds: Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0')
+			};
 
-            // Update with smooth transition
-            Object.keys(elements).forEach(key => {
-                const element = elements[key];
-                if (element && element.innerText !== values[key]) {
-                    element.style.opacity = '0.5';
-                    setTimeout(() => {
-                        element.innerText = values[key];
-                        element.style.opacity = '1';
-                    }, 150);
-                }
-            });
-        }
+			// Update with smooth transition
+			Object.keys(elements).forEach(key => {
+				const element = elements[key];
+				if (element && element.innerText !== values[key]) {
+					element.style.opacity = '0.5';
+					setTimeout(() => {
+						element.innerText = values[key];
+						element.style.opacity = '1';
+					}, 150);
+				}
+			});
+		}
 
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+		setInterval(updateCountdown, 1000);
+		updateCountdown();
 
-        // Parallax Effect with Smooth Transitions + Header Visibility
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const scroll = window.pageYOffset;
-                    const hero = document.querySelector('h1');
-                    const desktopHeader = document.querySelector('header.hidden.md\\:flex');
-                    const mobileHeader = document.querySelector('header.md\\:hidden');
+		// Parallax Effect with Smooth Transitions + Header Visibility
+		let ticking = false;
+		window.addEventListener('scroll', () => {
+			if (!ticking) {
+				window.requestAnimationFrame(() => {
+					const scroll = window.pageYOffset;
+					const hero = document.querySelector('h1');
+					const desktopHeader = document.querySelector('header.hidden.md\\:flex');
+					const mobileHeader = document.querySelector('header.md\\:hidden');
 
-                    // Parallax effect
-                    if (hero) {
-                        hero.style.transition = 'transform 0.1s ease-out';
-                        hero.style.transform = `translateY(${scroll * 0.15}px)`;
-                    }
+					// Parallax effect
+					if (hero) {
+						hero.style.transition = 'transform 0.1s ease-out';
+						hero.style.transform = `translateY(${scroll * 0.15}px)`;
+					}
 
-                    // Hide headers when scrolling past hero section (approx 80vh)
-                    const heroHeight = window.innerHeight * 0.8;
-                    if (scroll > heroHeight) {
-                        if (desktopHeader) desktopHeader.style.opacity = '0';
-                        if (mobileHeader) mobileHeader.style.opacity = '0';
-                    } else {
-                        if (desktopHeader) desktopHeader.style.opacity = '1';
-                        if (mobileHeader) mobileHeader.style.opacity = '1';
-                    }
+					// Hide headers when scrolling past hero section (approx 80vh)
+					const heroHeight = window.innerHeight * 0.8;
+					if (scroll > heroHeight) {
+						if (desktopHeader) desktopHeader.style.opacity = '0';
+						if (mobileHeader) mobileHeader.style.opacity = '0';
+					} else {
+						if (desktopHeader) desktopHeader.style.opacity = '1';
+						if (mobileHeader) mobileHeader.style.opacity = '1';
+					}
 
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
+					ticking = false;
+				});
+				ticking = true;
+			}
+		});
 
-        // Pill Nav Active State with Smooth Transitions
-        const pillItems = document.querySelectorAll('.pill-nav-item');
-        const scrollSections = ['hero', 'about', 'gallery', 'schedule'];
+		// Pill Nav Active State with Smooth Transitions
+		const pillItems = document.querySelectorAll('.pill-nav-item');
+		const scrollSections = ['hero', 'about', 'gallery', 'schedule'];
 
-        let navTicking = false;
-        let previousSection = 'hero';
+		let navTicking = false;
+		let previousSection = 'hero';
 
-        window.addEventListener('scroll', () => {
-            if (!navTicking) {
-                window.requestAnimationFrame(() => {
-                    let current = 'hero';
-                    const scrollPos = window.scrollY + 200;
+		window.addEventListener('scroll', () => {
+			if (!navTicking) {
+				window.requestAnimationFrame(() => {
+					let current = 'hero';
+					const scrollPos = window.scrollY + 200;
 
-                    scrollSections.forEach(id => {
-                        const element = id === 'hero' ? document.querySelector('main') : document.getElementById(id);
-                        if (element && element.offsetTop <= scrollPos) {
-                            current = id;
-                        }
-                    });
+					scrollSections.forEach(id => {
+						const element = id === 'hero' ? document.querySelector('main') : document.getElementById(id);
+						if (element && element.offsetTop <= scrollPos) {
+							current = id;
+						}
+					});
 
-                    // Only update if section changed for smoother transitions
-                    if (current !== previousSection) {
-                        pillItems.forEach(item => {
-                            const wasActive = item.classList.contains('active');
-                            item.classList.remove('active');
+					// Only update if section changed for smoother transitions
+					if (current !== previousSection) {
+						pillItems.forEach(item => {
+							const wasActive = item.classList.contains('active');
+							item.classList.remove('active');
 
-                            if (item.getAttribute('data-section') === current) {
-                                item.classList.add('active');
-                                // Add slight haptic-like feedback on mobile
-                                if (window.innerWidth < 768) {
-                                    item.style.transform = 'scale(1.15)';
-                                    setTimeout(() => {
-                                        item.style.transform = '';
-                                    }, 200);
-                                }
-                            }
-                        });
-                        previousSection = current;
-                    }
-                    navTicking = false;
-                });
-                navTicking = true;
-            }
-        });
+							if (item.getAttribute('data-section') === current) {
+								item.classList.add('active');
+								// Add slight haptic-like feedback on mobile
+								if (window.innerWidth < 768) {
+									item.style.transform = 'scale(1.15)';
+									setTimeout(() => {
+										item.style.transform = '';
+									}, 200);
+								}
+							}
+						});
+						previousSection = current;
+					}
+					navTicking = false;
+				});
+				navTicking = true;
+			}
+		});
 
-        // Enhanced click handling for smooth scrolling
-        pillItems.forEach(item => {
-            item.addEventListener('click', (e) => {
-                const section = item.getAttribute('data-section');
-                if (section && section !== 'hero') {
-                    e.preventDefault();
-                    const target = document.getElementById(section);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                } else if (section === 'hero') {
-                    e.preventDefault();
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+		// Enhanced click handling for smooth scrolling
+		pillItems.forEach(item => {
+			item.addEventListener('click', (e) => {
+				const section = item.getAttribute('data-section');
+				if (section && section !== 'hero') {
+					e.preventDefault();
+					const target = document.getElementById(section);
+					if (target) {
+						target.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						});
+					}
+				} else if (section === 'hero') {
+					e.preventDefault();
+					window.scrollTo({
+						top: 0,
+						behavior: 'smooth'
+					});
+				}
+			});
+		});
 
-        // Smooth Reveal Animations on Scroll
-        const revealElements = document.querySelectorAll('.reveal-up');
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
+		// Smooth Reveal Animations on Scroll
+		const revealElements = document.querySelectorAll('.reveal-up');
+		const revealObserver = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('active');
+				}
+			});
+		}, {
+			threshold: 0.1,
+			rootMargin: '0px 0px -50px 0px'
+		});
 
-        revealElements.forEach(el => revealObserver.observe(el));
+		revealElements.forEach(el => revealObserver.observe(el));
 
-        // Speaker Modal Functionality
-        const speakerModal = document.getElementById('speaker-modal');
-        const speakerCards = document.querySelectorAll('.speaker-card');
-        const modalClose = document.querySelector('.speaker-modal-close');
-        const modalOverlay = document.querySelector('.speaker-modal-overlay');
+		// Speaker Modal Functionality
+		const speakerModal = document.getElementById('speaker-modal');
+		const speakerCards = document.querySelectorAll('.speaker-card');
+		const modalClose = document.querySelector('.speaker-modal-close');
+		const modalOverlay = document.querySelector('.speaker-modal-overlay');
 
-        // Function to open modal with speaker data
-        function openSpeakerModal(speakerData) {
-            // Update modal content
-            document.getElementById('modal-name-top').textContent = speakerData.name;
-            document.getElementById('modal-name-bottom').textContent = speakerData.name;
-            document.getElementById('modal-role-top').textContent = speakerData.role;
-            document.getElementById('modal-role-bottom').textContent = speakerData.role;
-            document.getElementById('modal-number-left').textContent = speakerData.number;
-            document.getElementById('modal-number-right').textContent = speakerData.number;
-            document.getElementById('modal-image').src = speakerData.image;
-            document.getElementById('modal-image').alt = speakerData.name;
+		// Function to open modal with speaker data
+		function openSpeakerModal(speakerData) {
+			// Update modal content
+			document.getElementById('modal-name-top').textContent = speakerData.name;
+			document.getElementById('modal-name-bottom').textContent = speakerData.name;
+			document.getElementById('modal-role-top').textContent = speakerData.role;
+			document.getElementById('modal-role-bottom').textContent = speakerData.role;
+			document.getElementById('modal-number-left').textContent = speakerData.number;
+			document.getElementById('modal-number-right').textContent = speakerData.number;
+			document.getElementById('modal-image').src = speakerData.image;
+			document.getElementById('modal-image').alt = speakerData.name;
 
-            // Show modal
-            speakerModal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent background scroll
-        }
+			// Show modal
+			speakerModal.classList.remove('hidden');
+			document.body.style.overflow = 'hidden'; // Prevent background scroll
+		}
 
-        // Function to close modal
-        function closeSpeakerModal() {
-            speakerModal.classList.add('hidden');
-            document.body.style.overflow = ''; // Restore scroll
-        }
+		// Function to close modal
+		function closeSpeakerModal() {
+			speakerModal.classList.add('hidden');
+			document.body.style.overflow = ''; // Restore scroll
+		}
 
-        // Add click event to each speaker card
-        speakerCards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                // Extract speaker data from the card
-                const name = card.querySelector('.speaker-name').textContent;
-                const role = card.querySelector('.speaker-role').textContent;
-                const number = card.querySelector('.speaker-number').textContent;
-                const image = card.querySelector('.speaker-image').src;
+		// Add click event to each speaker card
+		speakerCards.forEach(card => {
+			card.addEventListener('click', (e) => {
+				// Extract speaker data from the card
+				const name = card.querySelector('.speaker-name').textContent;
+				const role = card.querySelector('.speaker-role').textContent;
+				const number = card.querySelector('.speaker-number').textContent;
+				const image = card.querySelector('.speaker-image').src;
 
-                openSpeakerModal({ name, role, number, image });
-            });
-        });
+				openSpeakerModal({ name, role, number, image });
+			});
+		});
 
-        // Close modal on close button click
-        modalClose.addEventListener('click', closeSpeakerModal);
+		// Close modal on close button click
+		modalClose.addEventListener('click', closeSpeakerModal);
 
-        // Close modal on overlay click
-        modalOverlay.addEventListener('click', closeSpeakerModal);
+		// Close modal on overlay click
+		modalOverlay.addEventListener('click', closeSpeakerModal);
 
-        // Close modal on ESC key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !speakerModal.classList.contains('hidden')) {
-                closeSpeakerModal();
-            }
-        });
-    </script>
+		// Close modal on ESC key
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape' && !speakerModal.classList.contains('hidden')) {
+				closeSpeakerModal();
+			}
+		});
+	</script>
 </body>
 
 </html>
