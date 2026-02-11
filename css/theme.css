@@ -1213,7 +1213,6 @@ footer a.px-4:hover {
 	pointer-events: all;
 }
 
-/* Dark Overlay */
 .speaker-modal-overlay {
 	position: absolute;
 	inset: 0;
@@ -1222,7 +1221,6 @@ footer a.px-4:hover {
 	-webkit-backdrop-filter: blur(10px);
 }
 
-/* Modal Content Container */
 .speaker-modal-content {
 	position: relative;
 	width: 90vw;
@@ -1265,7 +1263,6 @@ footer a.px-4:hover {
 	transform: rotate(90deg);
 }
 
-/* Modal Body Layout */
 .speaker-modal-body {
 	display: flex;
 	align-items: center;
@@ -1331,7 +1328,6 @@ footer a.px-4:hover {
 	font-weight: 600;
 }
 
-/* Speaker Image Container */
 .speaker-modal-image-container {
 	width: 100%;
 	max-width: 450px;

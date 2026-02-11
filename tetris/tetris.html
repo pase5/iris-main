@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samurai Tetrus | Registration Open Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="tetris.css" />
+</head>
+
+<body>
+    <div id="sakura-container"></div>
+    <div class="bg-orb" style="top: -10%; left: -10%;"></div>
+    <div class="bg-orb" style="bottom: -10%; right: -10%; animation-delay: -5s;"></div>
+
+    <header>
+        <div class="logo">IRIS<span>26</span></div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1 class="brush-text">REGISTRATION OPENS SOON</h1>
+                <p class="subtitle">
+                    Master the art of the falling blade. Prepare for the ultimate
+                    challenge.
+                </p>
+                <div class="cta-container">
+                    <div class="registration-status">Coming Soon to the Dojo</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-section">
+            <div class="game-container">
+                <div class="game-info">
+                    <div class="info-box">
+                        <h3>SCORE</h3>
+                        <div id="score">0000</div>
+                    </div>
+                    <div class="info-box">
+                        <h3>LEVEL</h3>
+                        <div id="level">1</div>
+                    </div>
+                </div>
+
+                <div class="canvas-wrapper">
+                    <canvas id="tetris"></canvas>
+                </div>
+
+                <div class="controls-guide">
+                    <p><span>A/D</span> Move</p>
+                    <p><span>W</span> Rotate</p>
+                    <p><span>S</span> Soft Drop</p>
+                    <p><span>Space</span> Hard Drop</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Touch Controls for Mobile -->
+        <section id="mobile-controls">
+            <div class="touch-row">
+                <button class="touch-btn" id="rotate-btn">W</button>
+            </div>
+            <div class="touch-row">
+                <button class="touch-btn" id="left-btn">A</button>
+                <button class="touch-btn" id="drop-btn">S</button>
+                <button class="touch-btn" id="right-btn">D</button>
+            </div>
+            <div class="touch-row">
+                <button class="touch-btn wide-btn" id="hard-drop-btn">SPACE</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; © 2026 IRIS'26 • TRAIN303 • All Rights Reserved</p>
+    </footer>
+
+    <script src="tetris.js"></script>
+</body>
+
+</html>

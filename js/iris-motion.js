@@ -6,7 +6,6 @@ class IrisMotion {
         this.particles = [];
         this.mouse = { x: -1000, y: -1000, active: false };
 
-        // Default Config
         const defaultConfig = {
             count: 70,
             colors: ['#FFD1DC', '#FFB6C1', '#FFF0F5'],
@@ -132,10 +131,8 @@ class IrisMotion {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Hero/Main Particles
     new IrisMotion('motion-bg');
 
-    // Footer Particles (New)
     new IrisMotion('footer-particles', {
         count: 40,
         magnetRadius: 150,
