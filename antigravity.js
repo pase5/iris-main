@@ -1,21 +1,24 @@
 class AntigravityEngine {
-    constructor() {
-        this.canvas = document.getElementById('antigravity-bg');
+    constructor(canvasId = 'antigravity-bg', options = {}) {
+        this.canvas = document.getElementById(canvasId);
         if (!this.canvas) return;
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
         this.mouse = { x: -1000, y: -1000, active: false };
 
-        // Sakura Blossom Parameters
-        this.config = {
-            count: 70, // Balanced density
-            colors: ['#FFD1DC', '#FFB6C1', '#FFF0F5'], // Sakura pink shades
+        // Default Config
+        const defaultConfig = {
+            count: 70,
+            colors: ['#FFD1DC', '#FFB6C1', '#FFF0F5'],
             magnetRadius: 250,
             lerpSpeed: 0.03,
             waveAmplitude: 3,
             waveSpeed: 0.2,
-            fieldStrength: 5
+            fieldStrength: 5,
+            opacityRange: [0.1, 0.4]
         };
+
+        this.config = { ...defaultConfig, ...options };
 
         this.init();
         this.animate();
@@ -40,21 +43,25 @@ class AntigravityEngine {
                 size: Math.random() * 4 + 4,
                 seed: Math.random() * 100,
                 color: this.config.colors[Math.floor(Math.random() * this.config.colors.length)],
-                opacity: Math.random() * 0.3 + 0.1
+                opacity: Math.random() * (this.config.opacityRange[1] - this.config.opacityRange[0]) + this.config.opacityRange[0]
             });
         }
     }
 
     resize() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
+        this.canvas.width = this.canvas.offsetWidth;
+        this.canvas.height = this.canvas.offsetHeight;
     }
 
     listeners() {
-        window.addEventListener('resize', () => this.init());
+        window.addEventListener('resize', () => {
+            this.resize();
+            this.init();
+        });
         document.addEventListener('mousemove', (e) => {
-            this.mouse.x = e.clientX;
-            this.mouse.y = e.clientY;
+            const rect = this.canvas.getBoundingClientRect();
+            this.mouse.x = e.clientX - rect.left;
+            this.mouse.y = e.clientY - rect.top;
             this.mouse.active = true;
         });
         document.addEventListener('mouseleave', () => {
@@ -70,20 +77,11 @@ class AntigravityEngine {
         this.ctx.fillStyle = color;
         this.ctx.globalAlpha = opacity;
 
-        // Heart-like Sakura Petal Shape
         this.ctx.beginPath();
         this.ctx.moveTo(0, 0);
         this.ctx.bezierCurveTo(-size, -size, -size * 1.5, size / 2, 0, size * 1.5);
         this.ctx.bezierCurveTo(size * 1.5, size / 2, size, -size, 0, 0);
         this.ctx.fill();
-
-        // Add a subtle center line for detail
-        this.ctx.strokeStyle = 'rgba(255,255,255,0.2)';
-        this.ctx.lineWidth = 0.5;
-        this.ctx.beginPath();
-        this.ctx.moveTo(0, 0);
-        this.ctx.lineTo(0, size);
-        this.ctx.stroke();
 
         this.ctx.restore();
     }
@@ -93,17 +91,15 @@ class AntigravityEngine {
         const time = Date.now() * 0.001;
 
         this.particles.forEach(p => {
-            // Calm Falling Motion (Cherry Blossom Style)
             const fieldX = Math.sin(time * this.config.waveSpeed + p.seed) * this.config.waveAmplitude;
             const fieldY = 0.5 + Math.cos(time * this.config.waveSpeed * 0.5 + p.seed) * 0.5;
 
             p.originX += fieldX * 0.1;
-            p.originY += fieldY; // Constant downward drift
+            p.originY += fieldY;
 
             let targetX = p.originX;
             let targetY = p.originY;
 
-            // Soft Magnetic Interaction
             if (this.mouse.active) {
                 const dx = this.mouse.x - p.x;
                 const dy = this.mouse.y - p.y;
@@ -112,18 +108,15 @@ class AntigravityEngine {
                 if (dist < this.config.magnetRadius) {
                     const force = (this.config.magnetRadius - dist) / this.config.magnetRadius;
                     const angle = Math.atan2(dy, dx);
-                    // Swirl away gently
                     targetX -= Math.cos(angle + 0.5) * force * this.config.fieldStrength * 10;
                     targetY -= Math.sin(angle + 0.5) * force * this.config.fieldStrength * 10;
                 }
             }
 
-            // Smooth Interpolation
             p.x += (targetX - p.x) * this.config.lerpSpeed;
             p.y += (targetY - p.y) * this.config.lerpSpeed;
             p.angle += p.spin + Math.sin(time + p.seed) * 0.01;
 
-            // Screen Wrap (Falling reset)
             if (p.originX < -100) p.originX = this.canvas.width + 100;
             if (p.originX > this.canvas.width + 100) p.originX = -100;
             if (p.originY > this.canvas.height + 100) {
@@ -139,5 +132,13 @@ class AntigravityEngine {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    new AntigravityEngine();
+    // Hero/Main Particles
+    new AntigravityEngine('antigravity-bg');
+
+    // Footer Particles (New)
+    new AntigravityEngine('footer-particles', {
+        count: 40,
+        magnetRadius: 150,
+        opacityRange: [0.05, 0.2]
+    });
 });
