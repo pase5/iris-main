@@ -1,4 +1,4 @@
-class AntigravityEngine {
+class IrisMotion {
     constructor(canvasId = 'antigravity-bg', options = {}) {
         this.canvas = document.getElementById(canvasId);
         if (!this.canvas) return;
@@ -133,10 +133,10 @@ class AntigravityEngine {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Hero/Main Particles
-    new AntigravityEngine('antigravity-bg');
+    new IrisMotion('motion-bg');
 
     // Footer Particles (New)
-    new AntigravityEngine('footer-particles', {
+    new IrisMotion('footer-particles', {
         count: 40,
         magnetRadius: 150,
         opacityRange: [0.05, 0.2]

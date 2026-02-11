@@ -5,14 +5,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>IRIS'26</title>
-	<link rel="icon" type="image/png" href="logo.png">
+	<link rel="icon" type="image/png" href="assets/img/favicon.png">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-	<link href="theme.css" rel="stylesheet">
+	<link href="css/theme.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-50">
-	<canvas id="antigravity-bg" class="fixed inset-0 pointer-events-none z-[-3]"></canvas>
+	<canvas id="motion-bg" class="fixed inset-0 pointer-events-none z-[-3]"></canvas>
 	<div class="bg-orb" style="top: -10%; left: -10%;"></div>
 	<div class="bg-orb" style="bottom: -10%; right: -10%; animation-delay: -5s;"></div>
 	<div id="petals-container"></div>
@@ -21,7 +21,7 @@
 	<header class="md:hidden fixed w-full z-50 px-6 py-4 flex justify-center">
 		<div
 			class="flex items-center justify-center premium-glass px-6 py-3 rounded-full border border-white/40 shadow-sm">
-			<img id="mobile-logo" src="./logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-7">
+			<img id="mobile-logo" src="./assets/logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-7">
 		</div>
 	</header>
 
@@ -30,7 +30,7 @@
 		<div
 			class="container max-w-5xl flex justify-between items-center premium-glass px-8 py-3 rounded-full border border-white/40 shadow-sm transition-all duration-500 hover:shadow-lg">
 			<div class="flex items-center">
-				<img id="navbar-logo" src="./logos/iris-ceal-blue-main.png" alt="IRIS Logo" class="h-8">
+				<img id="navbar-logo" src="./assets/logos/iris-ceal-blue-main.png" alt="IRIS Logo" class="h-8">
 			</div>
 
 			<nav
@@ -43,7 +43,7 @@
 
 			<!-- Logo only on Mobile -->
 			<div class="md:hidden flex items-center">
-				<img src="./logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-7">
+				<img src="./assets/logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-7">
 			</div>
 		</div>
 	</header>
@@ -210,7 +210,7 @@
 						<div
 							class="aspect-[4/5] bg-gray-100 rounded-sm overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl">
 							<div class="absolute inset-0 bg-gradient-to-t from-[#BC002D]/20 to-transparent"></div>
-							<img src="./images/meet our host.png" alt="Abstract Background"
+							<img src="./assets/img/host-portrait.png" alt="Abstract Background"
 								class="object-cover w-full h-full opacity-60">
 						</div>
 
@@ -225,7 +225,7 @@
 				<!-- Speaker Card 1 -->
 				<div class="speaker-card">
 					<div class="speaker-image-wrapper">
-						<img src="mine.png" alt="Aiswarya Lakshmi" class="speaker-image">
+						<img src="assets/img/placeholder.png" alt="Aiswarya Lakshmi" class="speaker-image">
 					</div>
 					<div class="speaker-info">
 						<span class="speaker-number">01</span>
@@ -237,7 +237,7 @@
 				<!-- Speaker Card 2 -->
 				<div class="speaker-card">
 					<div class="speaker-image-wrapper">
-						<img src="mine.png" alt="Dhanushkumar R" class="speaker-image">
+						<img src="assets/img/placeholder.png" alt="Dhanushkumar R" class="speaker-image">
 					</div>
 					<div class="speaker-info">
 						<span class="speaker-number">02</span>
@@ -249,7 +249,7 @@
 				<!-- Speaker Card 3 -->
 				<div class="speaker-card">
 					<div class="speaker-image-wrapper">
-						<img src="mine.png" alt="Abhijith Benny" class="speaker-image">
+						<img src="assets/img/placeholder.png" alt="Abhijith Benny" class="speaker-image">
 					</div>
 					<div class="speaker-info">
 						<span class="speaker-number">03</span>
@@ -261,7 +261,7 @@
 				<!-- Speaker Card 4 -->
 				<div class="speaker-card">
 					<div class="speaker-image-wrapper">
-						<img src="mine.png" alt="Akhil Raj" class="speaker-image">
+						<img src="assets/img/placeholder.png" alt="Akhil Raj" class="speaker-image">
 					</div>
 					<div class="speaker-info">
 						<span class="speaker-number">04</span>
@@ -273,7 +273,7 @@
 				<!-- Duplicate Set for Seamless Loop -->
 				<div class="speaker-card">
 					<div class="speaker-image-wrapper">
-						<img src="mine.png" alt="Aiswarya Lakshmi" class="speaker-image">
+						<img src="assets/img/placeholder.png" alt="Aiswarya Lakshmi" class="speaker-image">
 					</div>
 					<div class="speaker-info">
 						<span class="speaker-number">01</span>
@@ -284,7 +284,7 @@
 
 				<div class="speaker-card">
 					<div class="speaker-image-wrapper">
-						<img src="mine.png" alt="Dhanushkumar R" class="speaker-image">
+						<img src="assets/img/placeholder.png" alt="Dhanushkumar R" class="speaker-image">
 					</div>
 					<div class="speaker-info">
 						<span class="speaker-number">02</span>
@@ -295,7 +295,7 @@
 
 				<div class="speaker-card">
 					<div class="speaker-image-wrapper">
-						<img src="mine.png" alt="Abhijith Benny" class="speaker-image">
+						<img src="assets/img/placeholder.png" alt="Abhijith Benny" class="speaker-image">
 					</div>
 					<div class="speaker-info">
 						<span class="speaker-number">03</span>
@@ -306,7 +306,7 @@
 
 				<div class="speaker-card">
 					<div class="speaker-image-wrapper">
-						<img src="mine.png" alt="Akhil Raj" class="speaker-image">
+						<img src="assets/img/placeholder.png" alt="Akhil Raj" class="speaker-image">
 					</div>
 					<div class="speaker-info">
 						<span class="speaker-number">04</span>
@@ -328,31 +328,32 @@
 				<div class="poster-carousel">
 					<!-- Poster 1 -->
 					<div class="poster-item active">
-						<img src="./posters/WhatsApp Image 2026-01-30 at 3.29.50 PM.jpeg"
+						<img src="./assets/posters/campus ambassador.jpg"
 							class="w-full h-full object-cover grayscale brightness-50">
 					</div>
 					<!-- Poster 2 -->
 					<div class="poster-item next">
-						<img src="./posters/WhatsApp Image 2026-02-03 at 8.06.47 AM.jpeg"
+						<img src="./assets/posters/call for host.jpg"
 							class="w-full h-full object-cover grayscale brightness-50">
 					</div>
 					<!-- Poster 3 -->
 					<div class="poster-item far-right">
-						<img src="./posters/WhatsApp Image 2026-02-11 at 8.51.45 PM.jpeg"
+						<img src="./assets/posters/date reveal.jpg"
 							class="w-full h-full object-cover grayscale brightness-50">
 					</div>
 					<!-- Poster 4 -->
 					<div class="poster-item">
-						<img src="./posters/bg-9.png" class="w-full h-full object-cover grayscale brightness-50">
+						<img src="./assets/posters/coming soon.png"
+							class="w-full h-full object-cover grayscale brightness-50">
 					</div>
 					<!-- Poster 5 -->
 					<div class="poster-item">
-						<img src="./posters/meet our host.png"
+						<img src="./assets/posters/meet out host.png"
 							class="w-full h-full object-cover grayscale brightness-50">
 					</div>
 					<!-- Poster 6 -->
 					<div class="poster-item">
-						<img src="./posters/meetourhost insta.png"
+						<img src="./assets/posters/date reveal.png"
 							class="w-full h-full object-cover grayscale brightness-50">
 					</div>
 				</div>
@@ -435,9 +436,9 @@
 			<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 items-start text-center md:text-left">
 
 				<!-- Branding -->
-				<div class="md:col-span-1">
-					<img src="./logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-10 mb-4 mx-auto md:mx-0">
-					<p class="text-[11px] text-gray-500 italic uppercase tracking-wider">
+				<div class="reveal-up mb-12 md:mb-0">
+					<img src="./assets/logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-10 mb-4 mx-auto md:mx-0">
+					<p class="text-xs text-gray-400 leading-relaxed max-w-xs mx-auto md:mx-0">
 						"Reflecting Excellence & Innovation."
 					</p>
 				</div>
@@ -491,11 +492,11 @@
 			<!-- Separator Logos -->
 			<div class="border-t border-gray-100 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
 				<div class="flex items-center justify-center min-h-[40px] w-full md:w-auto">
-					<img id="footer-logo" src="./logos/sps-logo-color.png" alt="Partner Logo"
+					<img id="footer-logo" src="./assets/logos/ieee-sps-color.png" alt="Partner Logo"
 						class="h-7 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all">
 				</div>
 				<div class="text-[9px] text-gray-400 uppercase tracking-widest font-bold">
-					In Association With <span class="text-gray-900">IEEE SPS KERALA CHAPTER	</span>
+					In Association With <span class="text-gray-900">IEEE SPS KERALA CHAPTER </span>
 				</div>
 			</div>
 
@@ -516,7 +517,7 @@
 				<a href="https://thepase.ceal.in/"
 					class="group flex items-center gap-2 bg-white/50 backdrop-blur-sm border border-gray-100 pl-1 pr-3 py-1 rounded-full hover:border-[#BC002D]/30 transition-all active:scale-95 shadow-sm">
 					<div class="w-5 h-5 rounded-full overflow-hidden border border-gray-200">
-						<img src="mine.png" alt="PASE"
+						<img src="assets/img/placeholder.png" alt="PASE"
 							class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
 					</div>
 					<span class="text-[8px] uppercase tracking-widest text-gray-900 font-bold leading-none"><span
@@ -548,7 +549,8 @@
 					</div>
 
 					<div class="speaker-modal-image-container">
-						<img id="modal-image" src="mine.png" alt="Speaker Photo" class="speaker-modal-image">
+						<img id="modal-image" src="assets/img/placeholder.png" alt="Speaker Photo"
+							class="speaker-modal-image">
 					</div>
 
 					<div class="speaker-modal-footer">
@@ -598,8 +600,8 @@
 	</nav>
 
 	<!-- Scripts -->
-	<script src="petals.js"></script>
-	<script src="antigravity.js"></script>
+	<script src="js/petals.js"></script>
+	<script src="js/iris-motion.js"></script>
 	<script>
 		// Menu Toggle
 		const menuBtn = document.getElementById('menu-toggle');
@@ -661,10 +663,10 @@
 		const mobileLogo = document.getElementById('mobile-logo');
 		const footerLogo = document.getElementById('footer-logo');
 		const logos = [
-			{ src: './logos/iris-ceal-blue-main.png', desktopHeight: 'h-8', mobileHeight: 'h-7', footerHeight: 'h-7' },
-			{ src: './logos/IEEE SB CEAL Full - Dark.png', desktopHeight: 'h-6', mobileHeight: 'h-5', footerHeight: 'h-5' },
-			{ src: './logos/MBITS BLACK.png', desktopHeight: 'h-8', mobileHeight: 'h-8', footerHeight: 'h-7' },
-			{ src: './logos/sps-logo-color.png', desktopHeight: 'h-10', mobileHeight: 'h-10', footerHeight: 'h-8' }
+			{ src: './assets/logos/iris-ceal-blue-main.png', desktopHeight: 'h-8', mobileHeight: 'h-7', footerHeight: 'h-7' },
+			{ src: './assets/logos/ieee-ceal-dark.png', desktopHeight: 'h-6', mobileHeight: 'h-5', footerHeight: 'h-5' },
+			{ src: './assets/logos/mbits-logo-black.png', desktopHeight: 'h-8', mobileHeight: 'h-8', footerHeight: 'h-7' },
+			{ src: './assets/logos/ieee-sps-color.png', desktopHeight: 'h-10', mobileHeight: 'h-10', footerHeight: 'h-8' }
 		];
 		let currentLogoIndex = 0;
 
@@ -714,6 +716,7 @@
 
 		// Start the alternating animation every 4 seconds
 		setInterval(switchNavbarLogo, 4000);
+
 
 		// Countdown with Smooth Transitions
 		function updateCountdown() {
