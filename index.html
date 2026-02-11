@@ -9,19 +9,20 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<link href="css/theme.css" rel="stylesheet">
+	<script src="js/theme-engine.js"></script>
 </head>
 
-<body class="bg-gray-50">
-	<canvas id="motion-bg" class="fixed inset-0 pointer-events-none z-[-3]"></canvas>
-	<div class="bg-orb" style="top: -10%; left: -10%;"></div>
-	<div class="bg-orb" style="bottom: -10%; right: -10%; animation-delay: -5s;"></div>
+<body class="transition-colors duration-600">
 	<div id="petals-container"></div>
 
 	<!-- Mobile Header -->
 	<header class="md:hidden fixed w-full z-50 px-6 py-4 flex justify-center">
 		<div
-			class="flex items-center justify-center premium-glass px-6 py-3 rounded-full border border-white/40 shadow-sm">
+			class="flex items-center justify-between premium-glass px-6 py-3 rounded-full border border-white/40 shadow-sm w-[80%]">
 			<img id="mobile-logo" src="./assets/logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-7">
+			<button class="theme-toggle-btn text-gray-900 focus:outline-none">
+				<i class="fas fa-moon theme-toggle-icon"></i>
+			</button>
 		</div>
 	</header>
 
@@ -33,10 +34,12 @@
 				<img id="navbar-logo" src="./assets/logos/iris-ceal-blue-main.png" alt="IRIS Logo" class="h-8">
 			</div>
 
-			<nav
-				class="hidden md:flex items-center space-x-12 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-900">
+			<nav class="hidden md:flex items-center space-x-12 text-[10px] uppercase tracking-[0.2em] font-bold">
 				<a href="#about" class="nav-item">ABOUT</a>
 				<a href="#schedule" class="nav-item">ROADMAP</a>
+				<button class="theme-toggle-btn nav-item focus:outline-none">
+					<i class="fas fa-moon theme-toggle-icon"></i>
+				</button>
 				<a href="/tetris/tetris.html"
 					class="px-8 py-3 bg-crimson-red text-white rounded-full hover:bg-black transition-all duration-500 shadow-lg">REGISTER</a>
 			</nav>
@@ -125,13 +128,12 @@
 			<div class="container max-w-6xl relative z-10 text-center">
 				<div class="reveal-up">
 
-					<h1
-						class="text-5xl md:text-9xl mb-8 leading-tight tracking-tight text-[#1A1A1A] hero-title inline-block">
+					<h1 class="text-5xl md:text-9xl mb-8 leading-tight tracking-tight hero-title inline-block">
 						IRIS <span class="italic font-light">'26</span>
 					</h1>
 					<div class="w-24 h-px bg-[#BC002D]/30 mx-auto mb-12"></div>
 					<p
-						class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed font-light italic mb-12">
+						class="max-w-2xl mx-auto text-lg md:text-xl text-secondary leading-relaxed font-light italic mb-12">
 						"An insightful reflection on Signal Processing, AI, and the aesthetics of emerging technology."
 					</p>
 					<div class="flex flex-wrap justify-center gap-6">
@@ -142,7 +144,7 @@
 								SB
 								CEAL</a>
 							<a href="https://ieeembitssb.netlify.app/"
-								class="btn-norm px-6 py-3 border border-gray-300 text-[10px] font-bold uppercase tracking-widest text-gray-700 hover:bg-[#BC002D] hover:text-white transition-all">IEEE
+								class="btn-norm px-6 py-3 border border-gray-300 text-[10px] font-bold uppercase tracking-widest hover:bg-[#BC002D] hover:text-white transition-all">IEEE
 								SB
 								MBITS</a>
 						</div>
@@ -166,9 +168,9 @@
 			<div class="container max-w-5xl mx-auto px-8">
 				<div class="grid md:grid-cols-2 gap-20 items-center">
 					<div class="reveal-up">
-						<h2 class="text-4xl md:text-5xl mb-8 text-[#1A1A1A]">Reflection <br /><span
-								class="text-[#BC002D] italic">of Excellence</span></h2>
-						<p class="text-lg text-gray-600 leading-relaxed mb-8">
+						<h2 class="text-4xl md:text-5xl mb-8">Reflection <br /><span class="text-[#BC002D] italic">of
+								Excellence</span></h2>
+						<p class="text-lg text-secondary leading-relaxed mb-8">
 							Experience a transformative three-day hybrid journey at MBITS Kothamangalam from March 6th
 							to 8th, 2026. IRIS 2026 brings together global experts and ambitious students to explore the
 							intersection of Signal Processing and Artificial Intelligence.
@@ -312,7 +314,11 @@
 		</section>
 
 		<!-- Poster Focus Gallery -->
-		<section id="gallery" class="section-ma overflow-hidden">
+		<section id="gallery" class="section-ma overflow-hidden relative">
+			<div class="sakura-branch-container">
+				<div id="gallery-petals" class="floating-petals"></div>
+			</div>
+
 			<div class="container max-w-6xl mx-auto px-8">
 				<div class="text-center mb-16 reveal-up">
 					<h2 class="text-4xl md:text-6xl mb-4 italic font-light">The Visuals</h2>
@@ -356,19 +362,23 @@
 		</section>
 
 		<!-- Roadmap -->
-		<section id="schedule" class="section-ma">
+		<section id="schedule" class="section-ma relative overflow-hidden">
+			<div class="sakura-branch-container">
+				<div id="roadmap-petals" class="floating-petals"></div>
+			</div>
+
 			<div class="container max-w-6xl mx-auto px-8">
 				<div class="text-center mb-24 reveal-up">
 					<h2 class="text-4xl md:text-6xl mb-4">Event <span class="italic font-light">Roadmap</span></h2>
-					<p class="text-gray-400 uppercase tracking-[0.3em] text-[10px] font-bold">The Three-Day Cycle</p>
+					<p class="text-secondary uppercase tracking-[0.3em] text-[10px] font-bold">The Three-Day Cycle</p>
 				</div>
 
 				<div
 					class="flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-hidden snap-x snap-mandatory gap-6 px-4 pb-8 no-scrollbar">
-					<div class="reveal-up premium-glass p-12 hover:bg-white transition-all duration-500">
+					<div class="reveal-up premium-glass p-12 transition-all duration-500">
 						<span class="text-[#BC002D] text-xs font-bold tracking-widest block mb-4">壱 / DAY ONE</span>
 						<h3 class="text-2xl mb-8 font-light italic">Revealing Soon</h3>
-						<ul class="space-y-6 text-sm text-gray-600">
+						<ul class="space-y-6 text-sm text-secondary">
 							<li class="flex justify-between border-b border-gray-100 pb-2">
 								<span>Revealing Soon</span><span class="font-bold">--:--</span>
 							</li>
@@ -378,11 +388,10 @@
 									Soon</span><span class="font-bold">--:--</span></li>
 						</ul>
 					</div>
-					<div
-						class="reveal-up premium-glass p-12 bg-white/60 hover:bg-white transition-all duration-500 snap-center">
+					<div class="reveal-up premium-glass p-12 transition-all duration-500 snap-center">
 						<span class="text-[#BC002D] text-xs font-bold tracking-widest block mb-4">弐 / DAY TWO</span>
 						<h3 class="text-2xl mb-8 font-light italic">Revealing Soon</h3>
-						<ul class="space-y-6 text-sm text-gray-600">
+						<ul class="space-y-6 text-sm text-secondary">
 							<li class="flex justify-between border-b border-gray-100 pb-2"><span>Revealing
 									Soon</span><span class="font-bold">--:--</span></li>
 							<li class="flex justify-between border-b border-gray-100 pb-2"><span>Revealing
@@ -391,10 +400,10 @@
 									Soon</span><span class="font-bold">--:--</span></li>
 						</ul>
 					</div>
-					<div class="reveal-up premium-glass p-12 hover:bg-white transition-all duration-500">
+					<div class="reveal-up premium-glass p-12 transition-all duration-500">
 						<span class="text-[#BC002D] text-xs font-bold tracking-widest block mb-4">参 / DAY THREE</span>
 						<h3 class="text-2xl mb-8 font-light italic">Revealing Soon</h3>
-						<ul class="space-y-6 text-sm text-gray-600">
+						<ul class="space-y-6 text-sm text-secondary">
 							<li class="flex justify-between border-b border-gray-100 pb-2"><span>Revealing
 									Soon</span><span class="font-bold">--:--</span></li>
 							<li class="flex justify-between border-b border-gray-100 pb-2"><span>Revealing
@@ -408,7 +417,7 @@
 	</main>
 
 	<!-- Footer -->
-	<footer class="relative py-10 bg-white border-t border-gray-200 overflow-hidden">
+	<footer class="relative py-10 transition-colors duration-600 border-t border-primary overflow-hidden">
 		<!-- Local Particle Canvas -->
 		<canvas id="footer-particles" class="absolute inset-0 pointer-events-none opacity-40"></canvas>
 
@@ -432,88 +441,89 @@
 				<!-- Branding -->
 				<div class="reveal-up mb-12 md:mb-0">
 					<img src="./assets/logos/iris-ceal-blue-main.png" alt="IRIS'26" class="h-10 mb-4 mx-auto md:mx-0">
-					<p class="text-xs text-gray-400 leading-relaxed max-w-xs mx-auto md:mx-0">
+					<p class="text-xs text-secondary leading-relaxed max-w-xs mx-auto md:mx-0">
 						"Reflecting Excellence & Innovation."
 					</p>
 				</div>
 
 				<!-- Explore -->
 				<div>
-					<h3 class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-900 mb-4">Explore</h3>
-					<ul class="space-y-2 text-[12px] text-gray-500 font-medium">
-						<li><a href="#about" class="hover:text-[#BC002D] transition-colors">About</a></li>
-						<li><a href="#schedule" class="hover:text-[#BC002D] transition-colors">Roadmap</a></li>
-						<li><a href="#gallery" class="hover:text-[#BC002D] transition-colors">Gallery</a></li>
+					<h3 class="text-[10px] uppercase tracking-[0.2em] font-bold mb-4">Explore</h3>
+					<ul class="space-y-2 text-[12px] text-secondary font-medium">
+						<li><a href="#about" class="hover:text-[var(--footer-accent)] transition-colors">About</a></li>
+						<li><a href="#schedule" class="hover:text-[var(--footer-accent)] transition-colors">Roadmap</a>
+						</li>
+						<li><a href="#gallery" class="hover:text-[var(--footer-accent)] transition-colors">Gallery</a>
+						</li>
 					</ul>
 				</div>
 
 				<!-- Partners -->
 				<div>
-					<h3 class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-900 mb-4">Network</h3>
-					<ul class="space-y-2 text-[12px] text-gray-500 font-medium">
+					<h3 class="text-[10px] uppercase tracking-[0.2em] font-bold mb-4">Network</h3>
+					<ul class="space-y-2 text-[12px] text-secondary font-medium">
 						<li><a href="https://ieee.ceal.in/" target="_blank"
-								class="hover:text-[#BC002D] transition-colors">IEEE CEAL</a></li>
+								class="hover:text-[var(--footer-accent)] transition-colors">IEEE CEAL</a></li>
 						<li><a href="https://ieeembitssb.netlify.app/" target="_blank"
-								class="hover:text-[#BC002D] transition-colors">IEEE MBITS</a></li>
+								class="hover:text-[var(--footer-accent)] transition-colors">IEEE MBITS</a></li>
 						<li><a href="https://signalprocessingsociety.org/" target="_blank"
-								class="hover:text-[#BC002D] transition-colors">IEEE SPS</a></li>
+								class="hover:text-[var(--footer-accent)] transition-colors">IEEE SPS</a></li>
 					</ul>
 				</div>
 
 				<!-- CTA & Socials -->
 				<div class="flex flex-col items-center md:items-end text-center md:text-right">
-					<h3 class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-900 mb-4">Connect</h3>
+					<h3 class="text-[10px] uppercase tracking-[0.2em] font-bold mb-4">Connect</h3>
 					<div class="flex flex-wrap justify-center md:justify-end gap-3 mb-4">
 						<a href="https://www.instagram.com/iris.ieee/" target="_blank"
-							class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-[#BC002D] hover:text-white hover:border-[#BC002D] transition-all duration-300">
+							class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-secondary hover:bg-[var(--footer-accent)] hover:text-white transition-all duration-300">
 							<i class="fab fa-instagram text-xs"></i>
 						</a>
 						<a href="https://www.linkedin.com/company/iris-ieee/" target="_blank"
-							class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-[#BC002D] hover:text-white hover:border-[#BC002D] transition-all duration-300">
+							class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-secondary hover:bg-[var(--footer-accent)] hover:text-white transition-all duration-300">
 							<i class="fab fa-linkedin-in text-xs"></i>
 						</a>
 						<a href="mailto:iris@ceal.in"
-							class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-[#BC002D] hover:text-white hover:border-[#BC002D] transition-all duration-300">
+							class="w-8 h-8 rounded-full border border-primary flex items-center justify-center text-secondary hover:bg-[var(--footer-accent)] hover:text-white transition-all duration-300">
 							<i class="fas fa-envelope text-xs"></i>
 						</a>
 					</div>
-					<a href="https://thepase.ceal.in"
-						class="inline-block px-8 py-2.5 bg-[#BC002D] text-white text-[10px] uppercase tracking-widest font-bold rounded-full hover:bg-black transition-all shadow-md">Register
+					<a href="/tetris/tetris.html"
+						class="inline-block px-8 py-2.5 text-white text-[10px] uppercase tracking-widest font-bold rounded-full transition-all shadow-md"
+						style="background-color: var(--footer-accent);">Register
 						Now</a>
 				</div>
 			</div>
 
 			<!-- Separator Logos -->
-			<div class="border-t border-gray-100 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+			<div class="border-t border-primary py-8 flex flex-col md:flex-row justify-between items-center gap-6">
 				<div class="flex items-center justify-center min-h-[40px] w-full md:w-auto">
 					<img id="footer-logo" src="./assets/logos/ieee-sps-color.png" alt="Partner Logo"
 						class="h-7 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all">
 				</div>
-				<div class="text-[9px] text-gray-400 uppercase tracking-widest font-bold">
-					In Association With <span class="text-gray-900">IEEE SPS KERALA CHAPTER </span>
+				<div class="text-[9px] text-secondary uppercase tracking-widest font-bold">
+					In Association With <span class="text-primary">IEEE SPS KERALA CHAPTER </span>
 				</div>
 			</div>
 
-			<div class="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-gray-100 gap-4">
-				<p class="text-[9px] text-gray-400 uppercase tracking-[0.2em]">
-					&copy; 2026 IRIS'26 • TRAIN303 • All Rights Reserved
+			<div class="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-primary gap-4">
+				<p class="text-[9px] text-secondary uppercase tracking-[0.2em]">
+					&copy; <span id="copyright-year"></span> IRIS'26 • TRAIN303 • All Rights Reserved
 				</p>
 				<!-- Back to Top (Centered) -->
 				<a href="#"
-					class="back-to-top-btn group flex items-center justify-center w-8 h-8 rounded-full border border-gray-100 bg-white/50 backdrop-blur-sm hover:border-[#BC002D]/30 transition-all active:scale-95 shadow-sm"
+					class="back-to-top-btn group flex items-center justify-center w-8 h-8 rounded-full border border-primary bg-white/20 backdrop-blur-sm transition-all active:scale-95 shadow-sm"
 					aria-label="Back to top">
 					<i
-						class="fas fa-chevron-up text-[10px] text-gray-400 group-hover:text-[#BC002D] group-hover:-translate-y-0.5 transition-all"></i>
+						class="fas fa-chevron-up text-[10px] text-secondary group-hover:text-[var(--footer-accent)] group-hover:-translate-y-0.5 transition-all"></i>
 				</a>
 
 				<a href="https://thepase.ceal.in/"
-					class="group flex items-center gap-2 bg-white/50 backdrop-blur-sm border border-gray-100 pl-1 pr-3 py-1 rounded-full hover:border-[#BC002D]/30 transition-all active:scale-95 shadow-sm">
-					<div class="w-5 h-5 rounded-full overflow-hidden border border-gray-200">
-						<img src="assets/img/placeholder.png" alt="PASE"
-							class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+					class="group flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-primary pl-1 pr-3 py-1 rounded-full transition-all active:scale-95 shadow-sm">
+					<div class="w-5 h-5 rounded-full overflow-hidden border border-primary">
 					</div>
-					<span class="text-[8px] uppercase tracking-widest text-gray-900 font-bold leading-none"><span
-							class="text-gray-400 font-medium">Developer •</span> PASE</span>
+					<span class="text-[8px] uppercase tracking-widest text-primary font-bold leading-none"><span
+							class="text-secondary font-medium">Developer •</span> PASE</span>
 				</a>
 			</div>
 		</div>
@@ -557,10 +567,13 @@
 	</div>
 
 	<!-- Mobile Menu (Hidden) -->
-	<div id="mobile-menu" class="fixed inset-0 bg-white z-[60] hidden flex-col items-center justify-center space-y-8">
-		<button id="menu-close" class="absolute top-10 right-10 text-2xl">&times;</button>
-		<a href="#about" class="text-2xl font-serif">About</a>
-		<a href="#schedule" class="text-2xl font-serif">Roadmap</a>
+	<div id="mobile-menu"
+		class="fixed inset-0 transition-colors duration-600 z-[60] hidden flex-col items-center justify-center space-y-8"
+		style="background-color: var(--bg-primary);">
+		<button id="menu-close" class="absolute top-10 right-10 text-2xl"
+			style="color: var(--text-primary);">&times;</button>
+		<a href="#about" class="text-2xl font-serif text-primary">About</a>
+		<a href="#schedule" class="text-2xl font-serif text-primary">Roadmap</a>
 		<a href="https://thepase.ceal.in" class="text-2xl font-serif text-[#BC002D]">Register</a>
 	</div>
 
@@ -582,7 +595,7 @@
 			<i class="fas fa-calendar-alt"></i>
 			<span>Roadmap</span>
 		</a>
-		<a href="https://thepase.ceal.in" class="pill-nav-item" style="color: #BC002D;">
+		<a href="#register" class="pill-nav-item" style="color: #BC002D;">
 			<i class="fas fa-ticket-alt"></i>
 			<span>Join</span>
 		</a>
@@ -600,52 +613,6 @@
 		menuBtn?.addEventListener('click', () => menu.classList.remove('hidden'));
 		closeBtn?.addEventListener('click', () => menu.classList.add('hidden'));
 		menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
-
-		// Dark Theme Toggle via Lantern
-		const lantern = document.getElementById('theme-toggle-lantern');
-		const htmlElement = document.documentElement;
-
-		// Check for saved theme preference or default to 'light'
-		const currentTheme = localStorage.getItem('theme') || 'light';
-		htmlElement.setAttribute('data-theme', currentTheme);
-
-		function toggleTheme() {
-			const theme = htmlElement.getAttribute('data-theme');
-			const newTheme = theme === 'dark' ? 'light' : 'dark';
-
-			// Update theme
-			htmlElement.setAttribute('data-theme', newTheme);
-			localStorage.setItem('theme', newTheme);
-
-			// Animate lantern
-			if (lantern) {
-				lantern.style.transform = 'scale(1.2) rotate(10deg)';
-				lantern.style.filter = 'drop-shadow(0 0 25px rgba(188, 0, 45, 0.9))';
-
-				setTimeout(() => {
-					lantern.style.transform = '';
-					lantern.style.filter = '';
-				}, 400);
-			}
-		}
-
-		// Add click handler to lantern
-		lantern?.addEventListener('click', toggleTheme);
-
-		// Add keyboard accessibility
-		lantern?.addEventListener('keypress', (e) => {
-			if (e.key === 'Enter' || e.key === ' ') {
-				e.preventDefault();
-				toggleTheme();
-			}
-		});
-
-		// Make lantern focusable for accessibility
-		if (lantern) {
-			lantern.setAttribute('tabindex', '0');
-			lantern.setAttribute('role', 'button');
-			lantern.setAttribute('aria-label', 'Toggle dark theme');
-		}
 
 		// Navbar & Footer Logo Alternating Animation
 		const navbarLogo = document.getElementById('navbar-logo');
@@ -905,6 +872,18 @@
 				closeSpeakerModal();
 			}
 		});
+	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			if (typeof createPetalsInContainer === 'function') {
+				createPetalsInContainer('gallery-petals', 6, true);
+				createPetalsInContainer('roadmap-petals', 6, true);
+			}
+		});
+	</script>
+	<script>
+		// Set dynamic copyright year
+		document.getElementById('copyright-year').textContent = new Date().getFullYear();
 	</script>
 </body>
 

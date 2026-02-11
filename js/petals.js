@@ -1,21 +1,28 @@
 function createPetals() {
-    const container = document.getElementById('petals-container');
+    createPetalsInContainer('petals-container', 20); // Reduced from 40
+}
+
+function createPetalsInContainer(containerId, count, isPink = false) {
+    const container = document.getElementById(containerId);
     if (!container) return;
 
-    const count = 40;
     for (let i = 0; i < count; i++) {
         const petal = document.createElement('div');
-        petal.className = 'petal';
+        petal.className = isPink ? 'petal-premium-pink' : 'petal';
 
-        const size = Math.random() * 12 + 8;
+        const size = Math.random() * (isPink ? 15 : 12) + (isPink ? 10 : 8);
         const startX = Math.random() * 100;
-        const duration = Math.random() * 8 + 7;
-        const delay = Math.random() * 10;
+        // Significantly slowed down (12s to 25s)
+        const duration = Math.random() * 13 + 12;
+        const delay = Math.random() * 20; // Increased delay buffer
+        const rotation = Math.random() * 360;
 
         petal.style.width = `${size}px`;
-        petal.style.height = `${size * 0.7}px`;
+        petal.style.height = `${size * 0.9}px`;
         petal.style.left = `${startX}%`;
-        petal.style.animation = `drift ${duration}s ease-in-out -${delay}s infinite`;
+        petal.style.opacity = Math.random() * 0.4 + 0.3; // Slightly more transparent
+        petal.style.transform = `rotate(${rotation}deg)`;
+        petal.style.animation = `petalFloat ${duration}s ease-in-out -${delay}s infinite`;
 
         container.appendChild(petal);
     }
