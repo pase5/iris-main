@@ -152,6 +152,18 @@
 				</div>
 			</div>
 
+			<!-- Premium Live Clock -->
+			<div class="absolute bottom-10 left-10 md:left-20 hidden md:block">
+				<div class="premium-glass px-6 py-4 rounded-lg border border-white/40 shadow-lg backdrop-blur-md">
+					<div class="text-center">
+						<div id="live-time" class="text-3xl font-light tracking-wider mb-1"
+							style="color: var(--text-primary);">--:--:--</div>
+						<div id="live-date" class="text-[9px] uppercase tracking-[0.3em] font-bold"
+							style="color: var(--text-accent);">Loading...</div>
+					</div>
+				</div>
+			</div>
+
 			<!-- Floating Lanterns (SVG) - Theme Toggle -->
 			<div class="absolute bottom-10 right-10 md:right-20 hidden md:block">
 				<svg id="theme-toggle-lantern" width="60" height="100" viewBox="0 0 60 100" class="lantern-glow"
@@ -884,6 +896,44 @@
 	<script>
 		// Set dynamic copyright year
 		document.getElementById('copyright-year').textContent = new Date().getFullYear();
+	</script>
+	<script>
+		// Live Clock Update
+		function updateClock() {
+			const now = new Date();
+
+			// Format time (12-hour format with AM/PM)
+			let hours = now.getHours();
+			const minutes = now.getMinutes().toString().padStart(2, '0');
+			const seconds = now.getSeconds().toString().padStart(2, '0');
+			const ampm = hours >= 12 ? 'PM' : 'AM';
+			hours = hours % 12;
+			hours = hours ? hours : 12; // Convert 0 to 12
+
+			const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
+
+			// Format date
+			const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+			const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+			const dayName = days[now.getDay()];
+			const day = now.getDate();
+			const month = months[now.getMonth()];
+			const year = now.getFullYear();
+
+			const dateString = `${dayName}, ${month} ${day}, ${year}`;
+
+			// Update DOM
+			const timeEl = document.getElementById('live-time');
+			const dateEl = document.getElementById('live-date');
+
+			if (timeEl) timeEl.textContent = timeString;
+			if (dateEl) dateEl.textContent = dateString;
+		}
+
+		// Update clock immediately and then every second
+		updateClock();
+		setInterval(updateClock, 1000);
 	</script>
 </body>
 
